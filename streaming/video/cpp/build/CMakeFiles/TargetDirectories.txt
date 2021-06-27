@@ -1,0 +1,3 @@
+/home/avatarquest/catkin_ws/src/streaming/video/cpp/build/CMakeFiles/rebuild_cache.dir
+/home/avatarquest/catkin_ws/src/streaming/video/cpp/build/CMakeFiles/ZED_Streaming_Sender.dir
+/home/avatarquest/catkin_ws/src/streaming/video/cpp/build/CMakeFiles/edit_cache.dir

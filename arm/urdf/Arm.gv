@@ -1,0 +1,14 @@
+digraph G {
+node [shape=box];
+"shoulder" [label="shoulder"];
+"socket" [label="socket"];
+"bicep" [label="bicep"];
+"forearm" [label="forearm"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"shoulder" -> "shoulder_yaw" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"shoulder_yaw" -> "socket"
+"socket" -> "shouder_pitch" [label="xyz: 0 3 0 \nrpy: 0 -0 0"]
+"shouder_pitch" -> "bicep"
+"bicep" -> "elbow" [label="xyz: 0 3 0 \nrpy: 0 -0 0"]
+"elbow" -> "forearm"
+}

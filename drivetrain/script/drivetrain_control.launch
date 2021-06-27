@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="drivetrain" name="wheel" type="wheel_control"/>
+	<node pkg="drivetrain" name="speed" type="speed_control"/>
+    <node pkg="drivetrain" name="script" type="rosserial.sh" output="screen"/>
+</launch>

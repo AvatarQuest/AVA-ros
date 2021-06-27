@@ -1,0 +1,89 @@
+<robot name="Arm">
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.23741888 0.07387082 0.01"/>
+      </geometry>
+      <material name="white"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+
+  <link name="socket">
+    <visual>
+      <geometry>
+        <cylinder length="0.0508" radius="0.0127"/>
+      </geometry>
+      <material name="white"/>
+      <!-- <origin xyz="0.10600944 0 0.0303" rpy="0 0 0" /> -->
+    </visual>
+  </link>
+
+  <link name="bicep">
+    <visual>
+      <geometry>
+        <box size="0.03556 0.0766826 0.1439164"/>
+      </geometry>
+      <material name="white"/>
+    <origin xyz="0 0 0.0718082" rpy="0 0 0" />
+    </visual>
+  </link> 
+
+  <link name="forearm">
+    <visual>
+      <geometry>
+        <box size="0.03556 0.0701802 0.1613662"/>
+      </geometry>
+      <material name="white"/>
+      <origin xyz="0 0 0.0806831" rpy="0 0 0" />
+    </visual>
+  </link>
+
+  <link name="end_effector">
+    <visual>
+      <geometry>
+        <box size="0.0673354 0.1293368 0.1192022"/>
+      </geometry>
+      <material name="white"/>
+      <origin xyz="0 0 0.0596011" rpy="0 0 0" />
+    </visual>
+  </link>
+
+  <joint name="shoulder_yaw" type="continuous">
+    <parent link="base_link"/>
+    <child link="socket"/>
+     <origin xyz="0.10600944 0 0.0303" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <joint name="shoulder_pitch" type="revolute">
+    <parent link="socket"/>
+    <child link="bicep"/>
+    <limit effort="100.0" lower="-1.0472" upper="1.0472" velocity="20" />
+    <origin xyz="0 0.0141986 0.0254" rpy="0 0 0"/> 
+    <axis xyz="0 1 0" />
+  </joint>
+
+
+  <joint name="elbow" type="revolute">
+    <parent link="bicep"/>
+    <child link="forearm"/>
+    <limit effort="100.0" lower="-1.76278" upper="1.76278" velocity="20" />
+    <origin xyz="0 0 0.1439164" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="wrist" type="continuous">
+    <parent link="forearm"/>
+    <child link="end_effector"/>
+    <origin xyz="0 0 0.1613662" rpy="0 0 0" />
+
+    <axis xyz="0 0 1" />
+  </joint>
+  
+</robot>

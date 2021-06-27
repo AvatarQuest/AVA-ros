@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	<node name="pantilt" pkg="vision" type="pantilt" respawn="true"/>
+
+</launch>

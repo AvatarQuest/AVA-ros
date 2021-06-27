@@ -1,0 +1,4 @@
+<launch>
+    <node name="speed_control" pkg="drivetrain" type="speed_control" />
+    <node name="wheel_control" pkg="drivetrain" type="wheel_control" />
+</launch>
