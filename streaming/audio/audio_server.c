@@ -3,7 +3,7 @@
 /*
  AVATAR CLIENT: gst-launch-1.0 tcpclientsrc port=8081 host=192.168.0.114 ! rawaudioparse ! audioconvert ! audioresample ! alsasink
  AVATAR SERVER: gst-launch-1.0 alsasrc ! queue ! audio/x-raw,rate=44100,channels=2 ! tcpserversink port=8080 host=0.0.0.0
- OP CLIENT: gst-launch-1.0 tcpclientsrc port=8080 host=192.168.0.137 ! rawaudioparse ! audioconvert ! audioresample ! autoaudiosink
+ OP CLIENT: ./gst-launch-1.0 tcpclientsrc port=8080 host=192.168.0.137 ! rawaudioparse ! audioconvert ! audioresample ! autoaudiosink
  OP SERVER: ./gst-launch-1.0 directsoundsrc ! queue ! audio/x-raw ! tcpserversink port=8081 host=0.0.0.0
  */
 // gst-launch-1.0 alsasrc ! queue ! audio/x-raw,rate=44100,channels=2 ! tcpserversink port=8080 host=0.0.0.0
