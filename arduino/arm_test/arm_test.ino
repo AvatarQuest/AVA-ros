@@ -89,8 +89,8 @@ void setup()
 void loop(){
   int yaw = yaw_encoder.getPosition();
   int pitch = pitch_encoder.getPosition();
-  int yaw_speed = yaw < yaw_goal ? 96 : 87; 
-  int pitch_speed = pitch < pitch_goal ? 97 : 88; 
+  int yaw_speed = yaw < yaw_goal ? 97 : 86; 
+  int pitch_speed = pitch < pitch_goal ? 98 : 87; 
 
   if (abs(yaw - yaw_goal) < 7) { yaw_speed = 90; }
   if (abs(pitch - pitch_goal) < 7) { pitch_speed = 90; }

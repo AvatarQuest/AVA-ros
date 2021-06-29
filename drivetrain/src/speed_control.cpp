@@ -2,7 +2,7 @@
 #include "ros/ros.h"
 #include "drivetrain/Motor.h"
 #include "geometry_msgs/Vector3.h"
-#include <signal.h>
+//#include <signal.h>
 
 #include <sstream>
 
@@ -71,12 +71,12 @@ int main(int argc, char **argv) {
     nodehandle.setParam("drivetrain/motor_ids", drivetrain_ids);
     nodehandle.setParam("drivetrain/motor_count", int(sizeof(drivetrain_ids)/sizeof(drivetrain_ids[0])));
 
-    ros::Subscriber speed_topic = nodehandle.subscribe("set_motor_speed", 10, speedCallback);
-    pwm_topic = nodehandle.advertise<geometry_msgs::Vector3>("set_motor_pwm", 10);
+    ros::Subscriber speed_topic = nodehandle.subscribe("set_motor_speed", 20, speedCallback);
+    pwm_topic = nodehandle.advertise<geometry_msgs::Vector3>("set_motor_pwm", 20);
     
     std::cout << "Started node: 'speed_control'" << std::endl;
 
-    signal(SIGINT, closeNode);
+    //signal(SIGINT, closeNode);
 
     ros::spin();
     return 0;

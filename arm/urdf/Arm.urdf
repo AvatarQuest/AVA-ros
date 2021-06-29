@@ -12,6 +12,16 @@
       <material name="white"/>
       <origin xyz="0 0 0" rpy="0 0 0" />
     </visual>
+    <collision> 
+      <geometry>
+        <box size="0.23741888 0.07387082 0.01"/>
+      </geometry>
+    </collision>
+     <inertial>
+        <mass value="5" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.004" ixy="0.001" ixz="0" iyy="0.006" iyz="0" izz="0.007" />
+    </inertial>
   </link>
 
   <link name="socket">
@@ -20,8 +30,19 @@
         <cylinder length="0.0508" radius="0.0127"/>
       </geometry>
       <material name="white"/>
-      <!-- <origin xyz="0.10600944 0 0.0303" rpy="0 0 0" /> -->
     </visual>
+    <collision> 
+      <geometry>
+          <cylinder length="0.0508" radius="0.0127"/>
+        </geometry>
+    </collision>
+    <inertial>
+      <mass value="5" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.004" ixy="0.001" ixz="0" iyy="0.006" iyz="0" izz="0.007" />
+    </inertial>
+      <!-- <origin xyz="0.10600944 0 0.0303" rpy="0 0 0" /> -->
+    
   </link>
 
   <link name="bicep">
@@ -32,6 +53,16 @@
       <material name="white"/>
     <origin xyz="0 0 0.0718082" rpy="0 0 0" />
     </visual>
+    <collision> 
+      <geometry>
+        <box size="0.03556 0.0766826 0.1439164"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.004" ixy="0.001" ixz="0" iyy="0.006" iyz="0" izz="0.007" />
+    </inertial>
   </link> 
 
   <link name="forearm">
@@ -42,6 +73,16 @@
       <material name="white"/>
       <origin xyz="0 0 0.0806831" rpy="0 0 0" />
     </visual>
+    <collision> 
+      <geometry>
+        <box size="0.03556 0.0701802 0.1613662"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.004" ixy="0.001" ixz="0" iyy="0.006" iyz="0" izz="0.007" />
+    </inertial>
   </link>
 
   <link name="end_effector">
@@ -52,6 +93,16 @@
       <material name="white"/>
       <origin xyz="0 0 0.0596011" rpy="0 0 0" />
     </visual>
+    <collision> 
+      <geometry>
+        <box size="0.0673354 0.1293368 0.1192022"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.004" ixy="0.001" ixz="0" iyy="0.006" iyz="0" izz="0.007" />
+    </inertial>
   </link>
 
   <joint name="shoulder_yaw" type="continuous">

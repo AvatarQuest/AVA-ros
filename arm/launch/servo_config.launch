@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="sim" default="true" />
+
+  <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+    <param name="parameter_ns" type="string" value="servo_server" />
+    <rosparam command="load" file="$(find arm)/config/servo_config.yaml" if="$(arg sim)"/>
+    <rosparam command="load" file="$(find arm)/config/servo_config.yaml" unless="$(arg sim)"/>
+  </node>
+
+</launch>
+

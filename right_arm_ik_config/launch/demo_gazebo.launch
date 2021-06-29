@@ -3,7 +3,7 @@
   <!-- By default, we do not start a database (it can be large) -->
   <arg name="db" default="false" />
   <!-- Allow user to specify database location -->
-  <arg name="db_path" default="$(find right_arm_ik_config)/default_warehouse_mongo_db" />
+  <arg name="db_path" default="$(find right_arm_config)/default_warehouse_mongo_db" />
 
   <!-- By default, we are not in debug mode -->
   <arg name="debug" default="false" />
@@ -11,6 +11,7 @@
   <!-- By default, we won't load or override the robot_description -->
   <arg name="load_robot_description" default="false"/>
 
+  <arg name="execution_type" default="interpolate" />
   <!--
   By default, hide joint_state_publisher's GUI
 
@@ -28,7 +29,7 @@
   <arg name="urdf_path" default="$(find arm)/urdf/Arm.urdf"/>
 
   <!-- launch the gazebo simulator and spawn the robot -->
-  <include file="$(find right_arm_ik_config)/launch/gazebo.launch" >
+  <include file="$(find right_arm_config)/launch/gazebo.launch" >
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
     <arg name="urdf_path" value="$(arg urdf_path)"/>
@@ -51,7 +52,7 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
 
   <!-- Run the main MoveIt! executable without trajectory execution (we do not have controllers configured by default) -->
-  <include file="$(find right_arm_ik_config)/launch/move_group.launch">
+  <include file="$(find right_arm_config)/launch/move_group.launch">
     <arg name="allow_trajectory_execution" value="true"/>
     <arg name="fake_execution" value="false"/>
     <arg name="info" value="true"/>
@@ -60,13 +61,13 @@
   </include>
 
   <!-- Run Rviz and load the default config to see the state of the move_group node -->
-  <include file="$(find right_arm_ik_config)/launch/moveit_rviz.launch">
-    <arg name="rviz_config" value="$(find right_arm_ik_config)/launch/moveit.rviz"/>
+  <include file="$(find right_arm_config)/launch/moveit_rviz.launch">
+    <arg name="rviz_config" value="$(find right_arm_config)/launch/moveit.rviz"/>
     <arg name="debug" value="$(arg debug)"/>
   </include>
 
   <!-- If database loading was enabled, start mongodb as well -->
-  <include file="$(find right_arm_ik_config)/launch/default_warehouse_db.launch" if="$(arg db)">
+  <include file="$(find right_arm_config)/launch/default_warehouse_db.launch" if="$(arg db)">
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
 

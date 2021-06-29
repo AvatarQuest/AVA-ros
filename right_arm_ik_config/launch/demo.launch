@@ -64,4 +64,10 @@
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
 
+  <rosparam file="$(find right_arm_ik_config)/config/ros_controllers.yaml" command="load"/>
+
+    <!-- Load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+      output="screen" args="right_arm_controller "/>
+
 </launch>

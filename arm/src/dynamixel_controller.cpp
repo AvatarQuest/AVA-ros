@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 
     ros::Subscriber elbow_angle = nodehandle.subscribe("elbow_angle", 20, elbowCallback);
     ros::Subscriber wrist_angle = nodehandle.subscribe("wrist_angle", 20, wristCallback);
-    ros::Subscriber claw_topic = nodehandle.subscribe("claw_position", 20, clawCallback);
+    ros::Subscriber claw_topic = nodehandle.subscribe("claw_angle", 20, clawCallback);
 
     helper.setTorque(elbow1, true);
     helper.setTorque(elbow2, true);

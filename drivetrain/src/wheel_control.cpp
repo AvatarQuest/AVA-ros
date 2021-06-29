@@ -46,12 +46,18 @@ void wheelCallback(const drivetrain::Motor::ConstPtr& msg) {
 
 void rightSideCallback(const std_msgs::Float64::ConstPtr& msg) {
   drivetrain::Motor motor1, motor2, motor3, motor4;
+  double percent_speed = msg->data;
+  if (abs(percent_speed) > 0.08) {
+    percent_speed = 0.08 * (percent_speed / abs(percent_speed));
+    ROS_WARN("LIMITING SPEED TO 0.08");
+  }
+
   double speed = msg->data * 65;
 
-  motor1.id = gearbox_ids[0].motor1;
-  motor2.id = gearbox_ids[0].motor2;
-  motor3.id = gearbox_ids[1].motor1;
-  motor4.id = gearbox_ids[1].motor2;
+  motor1.id = wheel0.motor1;
+  motor2.id = wheel0.motor2;
+  motor3.id = wheel1.motor1;
+  motor4.id = wheel1.motor2;
   
   motor1.speed = speed;
   motor2.speed = speed;
@@ -68,12 +74,17 @@ void rightSideCallback(const std_msgs::Float64::ConstPtr& msg) {
 
 void leftSideCallback(const std_msgs::Float64::ConstPtr& msg) {
   drivetrain::Motor motor1, motor2, motor3, motor4;
-  double speed = msg->data * 65;
+  double percent_speed = msg->data;
+  if (abs(percent_speed) > 0.08) {
+    percent_speed = 0.08 * (percent_speed / abs(percent_speed));
+    ROS_WARN("LIMITING SPEED TO 0.08");
+  }
+  double speed = percent_speed * -65;
 
-  motor1.id = gearbox_ids[2].motor1;
-  motor2.id = gearbox_ids[2].motor2;
-  motor3.id = gearbox_ids[3].motor1;
-  motor4.id = gearbox_ids[3].motor2;
+  motor1.id = wheel2.motor1;
+  motor2.id = wheel2.motor2;
+  motor3.id = wheel3.motor1;
+  motor4.id = wheel3.motor2;
   
   motor1.speed = speed;
   motor2.speed = speed;
@@ -96,9 +107,9 @@ int main(int argc, char **argv) {
     // nodehandle.setParam("drivetrain/gearbox_ids", gearbox_ids);
 
     //ros::Subscriber speed_topic = nodehandle.subscribe("set_wheel_speed", 1, wheelCallback);
-    ros::Subscriber left_side = nodehandle.subscribe("left_side_speed", 1, leftSideCallback);
-    ros::Subscriber right_side = nodehandle.subscribe("right_side_speed", 1, rightSideCallback);
-    motor_speed_topic = nodehandle.advertise<drivetrain::Motor>("set_motor_speed", 1);
+    ros::Subscriber left_side = nodehandle.subscribe("left_side_speed", 5, leftSideCallback);
+    ros::Subscriber right_side = nodehandle.subscribe("right_side_speed", 5, rightSideCallback);
+    motor_speed_topic = nodehandle.advertise<drivetrain::Motor>("set_motor_speed", 10);
     
     std::cout << "Started node: 'wheel control'" << std::endl;
 

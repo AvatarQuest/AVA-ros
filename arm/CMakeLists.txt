@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   urdf
   dynamixel_sdk
   moveit_ros_planning_interface
+  moveit_servo
   #  moveit_visual_tools
   # Eigen3
 )
@@ -166,8 +167,15 @@ add_executable(pipeline src/pipeline.cpp)
 target_link_libraries(pipeline ${catkin_LIBRARIES})
 add_dependencies(pipeline ${catkin_EXPORTED_TARGETS})
 
-add_executable(joystick src/joystick.cpp)
-target_link_libraries(joystick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS joystick DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(estop src/estop.cpp)
+target_link_libraries(estop ${catkin_LIBRARIES})
+add_dependencies(estop ${catkin_EXPORTED_TARGETS})
+# add_executable(joystick src/joystick.cpp)
+# target_link_libraries(joystick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+# install(TARGETS joystick DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+#add_executable(servo_server src/servo_server.cpp)
+#target_link_libraries(servo_server ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+#install(TARGETS servo_server DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

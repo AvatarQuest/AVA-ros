@@ -15,7 +15,7 @@ int map(int x, int in_min, int in_max, int out_min, int out_max) {
 void vectorCallback(const geometry_msgs::Vector3::ConstPtr& msg) {
     double x = msg->x;
     double offset_x = x + 180 > 360 ? x + 180 - 360 : x + 180;
-    double mapped_x = 180 - map(map(offset_x, 45, 315, 0, 270), 0, 270, 0, 180) - 22;
+    double mapped_x = map(map(offset_x, 45, 315, 0, 270), 0, 270, 0, 180) - 22;
 
     double y = msg->y;
     double offset_y = y + 180 > 360 ? y + 180 - 360 : y + 180;

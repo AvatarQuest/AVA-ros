@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: arm
+    relative_path: urdf/Arm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/Arm.srdf
+  CONFIG:
+    author_name: Alexander Nopes
+    author_email: alexender.nopes@warriorlife.net
+    generated_timestamp: 1624826235

@@ -15,7 +15,10 @@ Motor motors[motor_amount];
 
 void setSpeedCallback(const geometry_msgs::Vector3& msg){
   int id = msg.x;
-  int value = msg.y; 
+  int value = msg.y;
+  if (abs(value-187) > 9) {
+    return;
+  } 
   analogWrite(id, value);
 //  for (int i = 0; i < motor_amount; i++) {
 //    if (motors[i].pin == id) {
@@ -40,11 +43,13 @@ void setup() {
   nodehandle.logdebug("connected");
 }
 
-void loop() {
-  if (nodehandle.getParam("/drivetrain/motor_ids", motor_pins, 8)){
-//    nodehandle.logwarn("setting up motors, got ids");
-   }
-    
+void loop() {   
+  while (!nodehandle.connected()) {
+      for (int i = 0; i < 8; i++) {
+          analogWrite(motor_pins[i], 187);
+      }
+    delay(1);
+  }
   nodehandle.spinOnce();
   delay(1);
 }

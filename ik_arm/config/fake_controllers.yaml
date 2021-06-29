@@ -1,0 +1,14 @@
+controller_list:
+  - name: fake_right_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - shoulder_yaw
+      - shoulder_pitch
+      - elbow
+  - name: fake_right_claw_controller
+    type: $(arg execution_type)
+    joints:
+      - wrist
+initial:  # Define initial robot poses.
+  - group: right_arm
+    pose: ack
