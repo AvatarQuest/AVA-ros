@@ -15,31 +15,33 @@ ros::Publisher wrist_angle_topic;
 ros::Publisher elbow_angle_topic;
 ros::Publisher claw_angle_topic;
 
-double shoulder_yaw_state = 0;
-double shoulder_pitch_state = 0;
+double shoulder_yaw_state = 1;
+double shoulder_pitch_state = 1;
 double wrist_angle_state = 0;
 double elbow_angle_state = 0;
 double claw_angle_state = 0;
 
 
 void pipeline_callback(const geometry_msgs::Vector3::ConstPtr& msg) {
-    shoulder_yaw_state += (msg->x * 10/60) * 1400/360;
-    shoulder_pitch_state += (msg->y * 10/60) *1400/360;
-    elbow_angle_state += (msg->z * 5/60);
+    // shoulder_yaw_state += (msg->x * 10/60) * 1400/360;
+    // shoulder_pitch_state += (msg->y * 10/60) *1400/360;
+    elbow_angle_state += (msg->z * 5/10);
 
     std_msgs::Float64 shoulder_yaw_message;
     std_msgs::Float64 shoulder_pitch_message;
     std_msgs::Float64 elbow_angle_message;
 
-    shoulder_yaw_message.data = shoulder_yaw_state;
-    shoulder_pitch_message.data = shoulder_pitch_state;
+    shoulder_yaw_message.data = msg->x;
+    shoulder_pitch_message.data = msg->y;
     elbow_angle_message.data = elbow_angle_state + 180;
 
-    shoulder_yaw_topic.publish(shoulder_yaw_message);
-    shoulder_pitch_topic.publish(shoulder_pitch_message);
+    if (shoulder_yaw_state != 0) shoulder_yaw_topic.publish(shoulder_yaw_message);
+    if (shoulder_pitch_state != 0) shoulder_pitch_topic.publish(shoulder_pitch_message);
     elbow_angle_topic.publish(elbow_angle_message);
 
-    
+    shoulder_yaw_state = msg->x;
+    shoulder_pitch_state = msg->y;
+
     ROS_INFO("SHOULDER_YAW: %.2f", shoulder_yaw_state);
     ROS_INFO("SHOULDER_PITCH: %.2f", shoulder_pitch_state);
     ROS_INFO("ELBOW_ANGLE: %.2f", elbow_angle_state);
@@ -76,7 +78,7 @@ void pipeline_callback(const geometry_msgs::Vector3::ConstPtr& msg) {
 }
 
 void wrist_callback(const std_msgs::Float64::ConstPtr& msg) {
-    wrist_angle_state += msg->data * 5/60;
+    wrist_angle_state += msg->data * 5/10;
 
     std_msgs::Float64 wrist_angle_message;
     wrist_angle_message.data = wrist_angle_state;
@@ -86,7 +88,7 @@ void wrist_callback(const std_msgs::Float64::ConstPtr& msg) {
 }
 
 void claw_callback(const std_msgs::Int32::ConstPtr& msg) {
-    claw_angle_state += msg->data * 5/60;
+    claw_angle_state += msg->data * 5/10;
 
     std_msgs::Float64 claw_angle_message;
     claw_angle_message.data = claw_angle_state;

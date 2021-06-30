@@ -2,8 +2,8 @@
 #include <Servo.h>
 #include <RotaryEncoder.h>
 
-#define PIN_IN1 5
-#define PIN_IN2 6
+#define PIN_IN1 7
+#define PIN_IN2 8
 #define PITCH 11
 
 Servo pitch_motor;

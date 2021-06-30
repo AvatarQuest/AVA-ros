@@ -14,7 +14,14 @@ MotorIdentifier claw;
 DynamixelHelper helper;
 
 void elbowCallback(const std_msgs::Float64::ConstPtr& msg) {
-    double angle1 = msg->data; // for motor 1
+    double angle1;
+    if (msg->data > 270) {
+        angle1 = 270;
+    } else if (msg->data < 90) {
+        angle1 = 90;
+    } else {
+        angle1 = msg->data; // for motor 1
+    }
     double angle2 = 133.8 - (angle1 - 180); // for motor 2 (offset and reversed)
 
     helper.setAngle(elbow1, angle1);
@@ -30,7 +37,9 @@ void wristCallback(const std_msgs::Float64::ConstPtr& msg) {
 }
 
 void clawCallback(const std_msgs::Float64::ConstPtr& msg) {
-    double angle = msg->data;
+    double angle = 201 + msg->data;
+    if (msg->data > 60) angle = 261;
+    else if (msg->data < -60) angle = 141;
     helper.setAngle(claw, angle);
     ROS_INFO("Setting claw angle: %.2f", angle);
 }
@@ -54,12 +63,12 @@ int main(int argc, char **argv) {
 
     helper = DynamixelHelper(motors);
 
-    ros::init(argc, argv, "arm_controller");
+    ros::init(argc, argv, "dynamixel_controller");
     ros::NodeHandle nodehandle;
 
-    ros::Subscriber elbow_angle = nodehandle.subscribe("elbow_angle", 20, elbowCallback);
-    ros::Subscriber wrist_angle = nodehandle.subscribe("wrist_angle", 20, wristCallback);
-    ros::Subscriber claw_topic = nodehandle.subscribe("claw_angle", 20, clawCallback);
+    ros::Subscriber elbow_angle = nodehandle.subscribe("elbow_angle", 1, elbowCallback);
+    ros::Subscriber wrist_angle = nodehandle.subscribe("wrist_angle", 1, wristCallback);
+    ros::Subscriber claw_topic = nodehandle.subscribe("claw_angle", 1, clawCallback);
 
     helper.setTorque(elbow1, true);
     helper.setTorque(elbow2, true);
