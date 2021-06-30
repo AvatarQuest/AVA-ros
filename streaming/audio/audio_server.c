@@ -1,10 +1,12 @@
 #include <gst/gst.h>
 #include <string.h>
 /*
- gst-launch-1.0 alsasrc ! queue ! audio/x-raw,rate=44100,channels=2 ! tcpserversink port=8080 host=0.0.0.0
- gst-launch-1.0 tcpclientsrc port=8080 host=10.59.0.70 ! rawaudioparse ! audioconvert ! audioresample ! lamemp3enc target=bitrate cbr=true bitrate=128 ! filesink location=test.mp3
- gst-launch-1.0 tcpclientsrc port=8080 host=10.59.0.70 ! rawaudioparse ! audioconvert ! audioresample ! autoaudiosink
+ AVATAR CLIENT: gst-launch-1.0 tcpclientsrc port=8081 host=192.168.0.114 ! rawaudioparse ! audioconvert ! audioresample ! alsasink
+ AVATAR SERVER: gst-launch-1.0 alsasrc ! queue ! audio/x-raw,rate=44100,channels=2 ! tcpserversink port=8080 host=0.0.0.0
+ OP CLIENT: ./gst-launch-1.0 tcpclientsrc port=8080 host=192.168.0.137 ! rawaudioparse ! audioconvert ! audioresample ! autoaudiosink
+ OP SERVER: ./gst-launch-1.0 directsoundsrc ! queue ! audio/x-raw ! tcpserversink port=8081 host=0.0.0.0
  */
+// gst-launch-1.0 alsasrc ! queue ! audio/x-raw,rate=44100,channels=2 ! tcpserversink port=8080 host=0.0.0.0
 // gst-launch-1.0 -v alsasrc ! queue ! audio/x-raw,rate=44100,channels=2 ! lamemp3enc target=bitrate cbr=true bitrate=120 ! filesink location=test.mp3
 
 const int rate = 44100;
