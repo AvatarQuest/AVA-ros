@@ -36,6 +36,8 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "pantilt");
     ros::NodeHandle nodehandle;
 
+    // compile pls
+
     ros::Subscriber pantilt_topic = nodehandle.subscribe("pantilt", 1, vectorCallback);
     pan_topic = nodehandle.advertise<std_msgs::Int32>("pan", 1);
     tilt_topic = nodehandle.advertise<std_msgs::Int32>("tilt", 1);

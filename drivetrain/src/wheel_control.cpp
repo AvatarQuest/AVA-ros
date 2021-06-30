@@ -104,11 +104,11 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "wheel_control");
     ros::NodeHandle nodehandle;
     
-    // nodehandle.setParam("drivetrain/gearbox_ids", gearbox_ids);
+    // nodehandle.setParam("drivetrain/gearbox_ids", gearbox_ids) compile pls;
 
     //ros::Subscriber speed_topic = nodehandle.subscribe("set_wheel_speed", 1, wheelCallback);
-    ros::Subscriber left_side = nodehandle.subscribe("left_side_speed", 5, leftSideCallback);
-    ros::Subscriber right_side = nodehandle.subscribe("right_side_speed", 5, rightSideCallback);
+    ros::Subscriber left_side = nodehandle.subscribe("left_side_speed", 1, leftSideCallback);
+    ros::Subscriber right_side = nodehandle.subscribe("right_side_speed", 1, rightSideCallback);
     motor_speed_topic = nodehandle.advertise<drivetrain::Motor>("set_motor_speed", 10);
     
     std::cout << "Started node: 'wheel control'" << std::endl;

@@ -48,7 +48,6 @@ generate_messages(DEPENDENCIES std_msgs)
 ## Declare a catkin package
 catkin_package(CATKIN_DEPENDS rospy roscpp message_runtime)
 
-## Build talker and listener
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(speed_control src/speed_control.cpp)

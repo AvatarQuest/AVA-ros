@@ -18,7 +18,7 @@
 #define PITCH_PIN 11
 
 Servo shoulder_yaw, shoulder_pitch, panServo, tiltServo;
-double yaw_goal = 10;
+double yaw_goal = 30;
 double pitch_goal = 0;
 
 RotaryEncoder yaw_encoder(YAW_PIN_IN1, YAW_PIN_IN2, RotaryEncoder::LatchMode::TWO03);
@@ -87,10 +87,10 @@ void setup()
 
 
 void loop(){
-  int yaw = yaw_encoder.getPosition();
-  int pitch = pitch_encoder.getPosition();
-  int yaw_speed = yaw < yaw_goal ? 97 : 86; 
-  int pitch_speed = pitch < pitch_goal ? 98 : 87; 
+  long yaw = yaw_encoder.getPosition();
+  long pitch = pitch_encoder.getPosition();
+  long yaw_speed = yaw < yaw_goal ? 97 : 86; 
+  long pitch_speed = pitch < pitch_goal ? 98 : 87; 
 
   if (abs(yaw - yaw_goal) < 7) { yaw_speed = 90; }
   if (abs(pitch - pitch_goal) < 7) { pitch_speed = 90; }

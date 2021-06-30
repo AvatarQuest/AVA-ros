@@ -1,8 +1,12 @@
 #include <Arduino.h>
+#include <Servo.h>
 #include <RotaryEncoder.h>
 
 #define PIN_IN1 5
 #define PIN_IN2 6
+#define PITCH 11
+
+Servo pitch_motor;
 
 // Setup a RotaryEncoder with 4 steps per latch for the 2 signal input pins:
 // RotaryEncoder encoder(PIN_IN1, PIN_IN2, RotaryEncoder::LatchMode::FOUR3);
@@ -15,7 +19,7 @@ RotaryEncoder encoder(PIN_IN1, PIN_IN2, RotaryEncoder::LatchMode::TWO03);
 // This interrupt routine will be called on any change of one of the input signals
 void checkPosition()
 {
-  Serial.write("Updating postition");
+  Serial.print("Updating postition");
   encoder.tick(); // just call tick() to check the state.
 }
 
@@ -23,12 +27,13 @@ void checkPosition()
 
 void setup()
 {
-  Serial.begin(57600);
+  pitch_motor.attach(PITCH);
+  Serial.begin(9600);
   while (!Serial);
   Serial.println("InterruptRotator example for the RotaryEncoder library.");
 
-  attachInterrupt(digitalPinToInterrupt(PIN_IN1), checkPosition, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(PIN_IN2), checkPosition, CHANGE);
+//  attachInterrupt(digitalPinToInterrupt(PIN_IN1), checkPosition, CHANGE);
+//  attachInterrupt(digitalPinToInterrupt(PIN_IN2), checkPosition, CHANGE);
 } // setup()
 
 
@@ -37,13 +42,14 @@ void loop()
 {
   static int pos = 0;
   encoder.tick();
+//  pitch_motor.write(86);
 
   int newPos = encoder.getPosition();
   if (pos != newPos) {
-    Serial.print("pos:");
+    Serial.print("\npos:");
     Serial.print(newPos);
-    Serial.print(" dir:");
-    Serial.println((int)(encoder.getDirection()));
+//    Serial.wri(" dir:");
+//    Serial.println((int)(encoder.getDirection()));
     pos = newPos;
   } // if
 } // loop ()

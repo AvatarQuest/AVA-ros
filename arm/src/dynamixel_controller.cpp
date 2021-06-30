@@ -63,6 +63,8 @@ int main(int argc, char **argv) {
 
     helper.setTorque(elbow1, true);
     helper.setTorque(elbow2, true);
+    helper.setTorque(wrist, true);
+    helper.setTorque(claw, true);
     // helper.setAngle(elbow2, 133.8);
     // helper.setTorque(wrist, true);
     // helper.setTorque(claw, true);

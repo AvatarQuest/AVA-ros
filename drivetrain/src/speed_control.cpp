@@ -12,7 +12,7 @@ double map(double x, double in_min, double in_max, double out_min, double out_ma
 
 ros::Publisher pwm_topic;
 const std::vector<int> drivetrain_ids = {3, 5, 6, 7, 8, 9, 10, 11};
-
+int drivetrain_states[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 void closeNode(int sig)
 {
   for (const int &id : drivetrain_ids) {
@@ -54,6 +54,13 @@ void speedCallback(const drivetrain::Motor::ConstPtr& msg) {
     } else if (speed < 0) {
       pwm = 184 + speed; // because speed is negative here
     }
+
+    if (drivetrain_states[id] == 0) {
+        drivetrain_states[id] = pwm;
+    } else if (drivetrain_states[id] == pwm) {
+        return;
+    }
+    drivetrain_states[id] = pwm;
     
     ROS_INFO("ID: %d, SPEED: %d, PWM: %d", id, msg->speed, pwm);
     

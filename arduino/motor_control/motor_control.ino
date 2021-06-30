@@ -17,6 +17,7 @@ void setSpeedCallback(const geometry_msgs::Vector3& msg){
   int id = msg.x;
   int value = msg.y;
   if (abs(value-187) > 9) {
+    nodehandle.logwarn("Limiting speed under 9");
     return;
   } 
   analogWrite(id, value);
@@ -44,11 +45,14 @@ void setup() {
 }
 
 void loop() {   
-  while (!nodehandle.connected()) {
+  if (!nodehandle.connected()) {
       for (int i = 0; i < 8; i++) {
           analogWrite(motor_pins[i], 187);
       }
-    delay(1);
+      while (!nodehandle.connected()) {
+        nodehandle.spinOnce();
+        delay(1);
+      }
   }
   nodehandle.spinOnce();
   delay(1);
