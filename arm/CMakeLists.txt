@@ -170,6 +170,11 @@ add_dependencies(pipeline ${catkin_EXPORTED_TARGETS})
 add_executable(estop src/estop.cpp)
 target_link_libraries(estop ${catkin_LIBRARIES})
 add_dependencies(estop ${catkin_EXPORTED_TARGETS})
+
+# add_executable(hardware_interface src/hardware_interface.cpp)
+#target_link_libraries(hardware_interface ${catkin_LIBRARIES})
+# add_dependencies(hardware_interface ${catkin_EXPORTED_TARGETS})
+
 # add_executable(joystick src/joystick.cpp)
 # target_link_libraries(joystick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 # install(TARGETS joystick DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

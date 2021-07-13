@@ -38,7 +38,7 @@ void setShoulderYawCallback(const std_msgs::Float64& msg){
       nodehandle.logwarn("MOVING YAW NEGATIVE");
     }
     
-    int yaw_speed = msg.data > 0 ? 96 : 85;
+    int yaw_speed = msg.data > 0 ? 97 : 86;
     shoulder_yaw.write(yaw_speed);
 //    yaw_goal = msg.data;
     
@@ -132,7 +132,10 @@ void loop(){
   if (!nodehandle.connected()) { 
     shoulder_yaw.write(90);
     shoulder_pitch.write(90);
-    while(!nodehandle.connected());
+    while(!nodehandle.connected()) {
+      nodehandle.spinOnce();
+      delay(1);
+    }
   }
   nodehandle.spinOnce(); 
   delay(1);

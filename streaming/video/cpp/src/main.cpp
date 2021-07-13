@@ -59,8 +59,8 @@ int main(int argc, char **argv) {
     }
 
     StreamingParameters stream_params;
-    stream_params.codec = STREAMING_CODEC::H264;
-    stream_params.bitrate = 8000;
+    stream_params.codec = STREAMING_CODEC::H265;
+    stream_params.bitrate = 1500;
     stream_params.chunk_size = 4096;
     if (argc == 2 && res_arg == 1) stream_params.port = atoi(argv[1]);
     if (argc > 2) stream_params.port = atoi(argv[2]);
