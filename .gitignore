@@ -51,3 +51,4 @@ qtcreator-*
 CATKIN_IGNORE
 CMakeFiles
 */build
+ros_control-melodic-devel/*
