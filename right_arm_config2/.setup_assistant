@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
-    package: urdf_tutorial
-    relative_path: right-arm/robot.urdf
+    package: right_arm_urdf
+    relative_path: urdf/robot.urdf
     xacro_args: ""
   SRDF:
     relative_path: config/onshape.srdf
   CONFIG:
     author_name: Jacker Nopes
     author_email: jacker.nopes@deanza.edu
-    generated_timestamp: 1626212888
+    generated_timestamp: 1626282731

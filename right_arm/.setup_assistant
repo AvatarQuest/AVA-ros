@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: arm
+    relative_path: urdf/right-arm/robot.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/jacker.srdf
+  CONFIG:
+    author_name: Alex Nopes
+    author_email: alex.nopes@yahoo.com
+    generated_timestamp: 1626286643
