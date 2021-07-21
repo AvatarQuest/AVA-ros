@@ -2,5 +2,5 @@
     <node name="pipeline" pkg="arm" type="pipeline" />
     <!-- <node name="joystick" pkg="arm" type="joystick" /> -->
     <node name="dynamixel_controller" pkg="arm" type="dynamixel_controller" />
-    <node name="estop" pkg="arm" type="estop" />
+    <node name="estop" pkg="arm" type="estop" required="true" />
 </launch>

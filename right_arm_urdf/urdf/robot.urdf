@@ -324,60 +324,6 @@
             <color rgba="0.411765 0.411765 0.411765 1.0" />
          </material>
       </collision>
-      <!-- <visual>
-         <origin xyz="0.0312733 0.0316299 -0.0294462" rpy="1.5708 -2.8616e-16 -2.23696" />
-         <geometry>
-            <mesh filename="package://right_arm_urdf/meshes/217-2625-003_rev1.stl" />
-         </geometry>
-         <material name="217-2625-003_rev1_material">
-            <color rgba="0.25098 0.25098 0.25098 1.0" />
-         </material>
-      </visual>
-      <collision>
-         <origin xyz="0.0312733 0.0316299 -0.0294462" rpy="1.5708 -2.8616e-16 -2.23696" />
-         <geometry>
-            <mesh filename="package://right_arm_urdf/meshes/217-2625-003_rev1.stl" />
-         </geometry>
-         <material name="217-2625-003_rev1_material">
-            <color rgba="0.25098 0.25098 0.25098 1.0" />
-         </material>
-      </collision> -->
-      <!-- <visual>
-         <origin xyz="0.0312733 0.0316299 0.0139016" rpy="-1.5708 -9.38059e-16 2.5501" />
-         <geometry>
-            <mesh filename="package://right_arm_urdf/meshes/217-2625-001_rev1.stl" />
-         </geometry>
-         <material name="217-2625-001_rev1_material">
-            <color rgba="0.866667 0.909804 1 1.0" />
-         </material>
-      </visual>
-      <collision>
-         <origin xyz="0.0312733 0.0316299 0.0139016" rpy="-1.5708 -9.38059e-16 2.5501" />
-         <geometry>
-            <mesh filename="package://right_arm_urdf/meshes/217-2625-001_rev1.stl" />
-         </geometry>
-         <material name="217-2625-001_rev1_material">
-            <color rgba="0.866667 0.909804 1 1.0" />
-         </material>
-      </collision> -->
-      <!-- <visual>
-         <origin xyz="0.0312733 0.0316299 -0.0154984" rpy="-1.5708 -4.62858e-16 -0.591496" />
-         <geometry>
-            <mesh filename="package://right_arm_urdf/meshes/217-2625-002_rev1.stl" />
-         </geometry>
-         <material name="217-2625-002_rev1_material">
-            <color rgba="0.866667 0.909804 1 1.0" />
-         </material>
-      </visual>
-      <collision>
-         <origin xyz="0.0312733 0.0316299 -0.0154984" rpy="-1.5708 -4.62858e-16 -0.591496" />
-         <geometry>
-            <mesh filename="package://right_arm_urdf/meshes/217-2625-002_rev1.stl" />
-         </geometry>
-         <material name="217-2625-002_rev1_material">
-            <color rgba="0.866667 0.909804 1 1.0" />
-         </material>
-      </collision> -->
       <inertial>
          <origin xyz="0 0 0" rpy="0 0 0" />
          <mass value="5" />

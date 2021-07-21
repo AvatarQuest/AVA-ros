@@ -1,0 +1,2261 @@
+<robot name="onshape">
+<link name="wbh_m2_5x10">
+<visual>
+<origin xyz="0.0787941 -0.0291207 0.313464" rpy="2.74388 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0787941 -0.0291207 0.313464" rpy="2.74388 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.00619566 -0.0982294 0.258073" rpy="-2.31578 1.02435 1.50188" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/forearmbodystandoff.stl"/>
+</geometry>
+<material name="forearmbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.00619566 -0.0982294 0.258073" rpy="-2.31578 1.02435 1.50188" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/forearmbodystandoff.stl"/>
+</geometry>
+<material name="forearmbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0969666 -0.00266191 0.342979" rpy="-2.06025 -0.723701 2.50834" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0969666 -0.00266191 0.342979" rpy="-2.06025 -0.723701 2.50834" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.107653 0.00392544 0.305124" rpy="1.07909 -0.728459 2.51174" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ilr-a01.stl"/>
+</geometry>
+<material name="pr33_ilr-a01_material">
+<color rgba="0.811765 0.858824 0.898039 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.107653 0.00392544 0.305124" rpy="1.07909 -0.728459 2.51174" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ilr-a01.stl"/>
+</geometry>
+<material name="pr33_ilr-a01_material">
+<color rgba="0.811765 0.858824 0.898039 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.101274 -0.000424276 0.302218" rpy="-2.36721 1.04279 -0.270775" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.101274 -0.000424276 0.302218" rpy="-2.36721 1.04279 -0.270775" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0249089 -0.142495 0.198469" rpy="-8.26228e-15 -0.172897 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/elbowmotorbracket.stl"/>
+</geometry>
+<material name="elbowmotorbracket_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0249089 -0.142495 0.198469" rpy="-8.26228e-15 -0.172897 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/elbowmotorbracket.stl"/>
+</geometry>
+<material name="elbowmotorbracket_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.111512 0.00704407 0.282906" rpy="1.41247 -0.507901 0.042704" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.111512 0.00704407 0.282906" rpy="1.41247 -0.507901 0.042704" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.11272 -0.0399516 0.327593" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.11272 -0.0399516 0.327593" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.088361 0.0135635 0.32396" rpy="-2.75394 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.088361 0.0135635 0.32396" rpy="-2.75394 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0702555 -0.0242478 0.301212" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0702555 -0.0242478 0.301212" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0486218 -0.104864 0.239616" rpy="-1.93083 7.26202e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/elbowjointbracket.stl"/>
+</geometry>
+<material name="elbowjointbracket_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0486218 -0.104864 0.239616" rpy="-1.93083 7.26202e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/elbowjointbracket.stl"/>
+</geometry>
+<material name="elbowjointbracket_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.107355 -0.0130351 0.307603" rpy="-1.95805 0.368432 2.02339" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ica-a01.stl"/>
+</geometry>
+<material name="pr33_ica-a01_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.107355 -0.0130351 0.307603" rpy="-1.95805 0.368432 2.02339" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ica-a01.stl"/>
+</geometry>
+<material name="pr33_ica-a01_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0224088 -0.1327 0.0516929" rpy="1.5708 0.756964 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/e8tencodershaft.stl"/>
+</geometry>
+<material name="e8tencodershaft_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0224088 -0.1327 0.0516929" rpy="1.5708 0.756964 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/e8tencodershaft.stl"/>
+</geometry>
+<material name="e8tencodershaft_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0609594 -0.0761618 0.0516929" rpy="-0.926911 -6.8384e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0609594 -0.0761618 0.0516929" rpy="-0.926911 -6.8384e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0337977 -0.0709099 0.0516929" rpy="-8.01223e-12 4.52972e-12 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_1.5in_socket_screw.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_1.5in_socket_screw.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0337977 -0.0709099 0.0516929" rpy="-8.01223e-12 4.52972e-12 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_1.5in_socket_screw.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_1.5in_socket_screw.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0565352 -0.14536 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0565352 -0.14536 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.00294843" rpy="1.5708 -9.38059e-16 2.5501" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.00294843" rpy="1.5708 -9.38059e-16 2.5501" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0778279 -0.0940358 0.189155" rpy="-2.96931 0.0146812 -1.05652" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/armbodystandoff.stl"/>
+</geometry>
+<material name="armbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0778279 -0.0940358 0.189155" rpy="-2.96931 0.0146812 -1.05652" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/armbodystandoff.stl"/>
+</geometry>
+<material name="armbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0435129 -0.136481 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0435129 -0.136481 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0522697 -0.0889059 0.0516929" rpy="1.5708 0.610312 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0522697 -0.0889059 0.0516929" rpy="1.5708 0.610312 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.125472 -0.0180456 0.275478" rpy="-2.70004 0.601648 -0.710937" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.125472 -0.0180456 0.275478" rpy="-2.70004 0.601648 -0.710937" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0696264 0.038978 -0.0915984" rpy="4.7541e-17 4.39226e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/prototypestand2rev2.stl"/>
+</geometry>
+<material name="prototypestand2rev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0696264 0.038978 -0.0915984" rpy="4.7541e-17 4.39226e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/prototypestand2rev2.stl"/>
+</geometry>
+<material name="prototypestand2rev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.147398 -0.0280755 0.293599" rpy="1.24887 -1.1903 -2.19828" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.147398 -0.0280755 0.293599" rpy="1.24887 -1.1903 -2.19828" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.05721 -0.0472264 0.284756" rpy="-3.14159 -1.21076 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_w-idle_alt2_36.stl"/>
+</geometry>
+<material name="dc12_w-idle_alt2_36_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.05721 -0.0472264 0.284756" rpy="-3.14159 -1.21076 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_w-idle_alt2_36.stl"/>
+</geometry>
+<material name="dc12_w-idle_alt2_36_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0156484" rpy="1.5708 -3.87577e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0156484" rpy="1.5708 -3.87577e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0761876 -0.0885602 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0761876 -0.0885602 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0339521 -0.125604 0.0834153" rpy="1.74369 -8.84401e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0339521 -0.125604 0.0834153" rpy="1.74369 -8.84401e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0757694 -0.0995284 0.0516929" rpy="-8.01223e-12 4.52516e-12 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_1.5in_socket_screw.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_1.5in_socket_screw.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0757694 -0.0995284 0.0516929" rpy="-8.01223e-12 4.52516e-12 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_1.5in_socket_screw.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_1.5in_socket_screw.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.110078 -0.014904 0.300164" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.110078 -0.014904 0.300164" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 -0.0376234" rpy="2.96018e-17 4.29356e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/baseplaterev2.stl"/>
+</geometry>
+<material name="baseplaterev2_material">
+<color rgba="0.74902 0.74902 0.74902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 -0.0376234" rpy="2.96018e-17 4.29356e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/baseplaterev2.stl"/>
+</geometry>
+<material name="baseplaterev2_material">
+<color rgba="0.74902 0.74902 0.74902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0522697 -0.0889059 0.0516929" rpy="-4.19635e-15 -4.41705e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchbearingplaterev2.stl"/>
+</geometry>
+<material name="shoulderpitchbearingplaterev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0522697 -0.0889059 0.0516929" rpy="-4.19635e-15 -4.41705e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchbearingplaterev2.stl"/>
+</geometry>
+<material name="shoulderpitchbearingplaterev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.102311 -0.0127479 0.313985" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.102311 -0.0127479 0.313985" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0824497 -0.107354 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0824497 -0.107354 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0661422 -0.0860679 0.238153" rpy="0.360033 -8.90426e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0661422 -0.0860679 0.238153" rpy="0.360033 -8.90426e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.131031 -0.0332086 0.300305" rpy="1.95845 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.131031 -0.0332086 0.300305" rpy="1.95845 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0321628 -0.0255741 0.293311" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0321628 -0.0255741 0.293311" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0900544 -0.0248871 0.299729" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_std_13.stl"/>
+</geometry>
+<material name="dc12_std_13_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0900544 -0.0248871 0.299729" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_std_13.stl"/>
+</geometry>
+<material name="dc12_std_13_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0385666 -0.0212076 0.272721" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0385666 -0.0212076 0.272721" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0559859" rpy="-1.5708 -5.33776e-16 -2.76056" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/18t_htd_pulley_9mm1.stl"/>
+</geometry>
+<material name="18t_htd_pulley_9mm1_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0559859" rpy="-1.5708 -5.33776e-16 -2.76056" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/18t_htd_pulley_9mm1.stl"/>
+</geometry>
+<material name="18t_htd_pulley_9mm1_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.114288 -0.0149876 0.295307" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/irb-a02_open.stl"/>
+</geometry>
+<material name="irb-a02_open_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.114288 -0.0149876 0.295307" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/irb-a02_open.stl"/>
+</geometry>
+<material name="irb-a02_open_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.10456 0.00181649 0.303715" rpy="-0.491707 -0.728459 2.51174" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10456 0.00181649 0.303715" rpy="-0.491707 -0.728459 2.51174" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.052509 -0.088555 0.0516929" rpy="1.44242 1.83663e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.052509 -0.088555 0.0516929" rpy="1.44242 1.83663e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0294462" rpy="1.5708 -2.8616e-16 -2.23696" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-003_rev1.stl"/>
+</geometry>
+<material name="217-2625-003_rev1_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0294462" rpy="1.5708 -2.8616e-16 -2.23696" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-003_rev1.stl"/>
+</geometry>
+<material name="217-2625-003_rev1_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0375237 -0.12804 0.238153" rpy="0.360033 -8.90426e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0375237 -0.12804 0.238153" rpy="0.360033 -8.90426e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0973416 -0.060727 0.296781" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0973416 -0.060727 0.296781" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.121129 -0.0203999 0.316493" rpy="-2.05976 0.722655 1.83088" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.121129 -0.0203999 0.316493" rpy="-2.05976 0.722655 1.83088" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0863669 -0.0388994 0.0516929" rpy="9.06466e-15 0.784949 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/rs_550_motor_mounting_plate.stl"/>
+</geometry>
+<material name="rs_550_motor_mounting_plate_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0863669 -0.0388994 0.0516929" rpy="9.06466e-15 0.784949 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/rs_550_motor_mounting_plate.stl"/>
+</geometry>
+<material name="rs_550_motor_mounting_plate_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 0.0131766" rpy="1.26876e-14 6.30594e-15 -1.49595" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderyawaxlerev2.stl"/>
+</geometry>
+<material name="shoulderyawaxlerev2_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 0.0131766" rpy="1.26876e-14 6.30594e-15 -1.49595" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderyawaxlerev2.stl"/>
+</geometry>
+<material name="shoulderyawaxlerev2_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0899568 -0.0248979 0.299676" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_std.stl"/>
+</geometry>
+<material name="dc12_std_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0899568 -0.0248979 0.299676" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_std.stl"/>
+</geometry>
+<material name="dc12_std_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.116799 -0.0233524 0.31452" rpy="-2.65263 -0.722655 -1.31071" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.116799 -0.0233524 0.31452" rpy="-2.65263 -0.722655 -1.31071" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0206202 -0.135323 0.0453429" rpy="4.59475e-12 8.01223e-12 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchencoderplate.stl"/>
+</geometry>
+<material name="shoulderpitchencoderplate_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0206202 -0.135323 0.0453429" rpy="4.59475e-12 8.01223e-12 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchencoderplate.stl"/>
+</geometry>
+<material name="shoulderpitchencoderplate_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.11478 -0.0190048 0.351616" rpy="1.89272 1.1903 0.94331" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.11478 -0.0190048 0.351616" rpy="1.89272 1.1903 0.94331" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.133011 -0.0128123 0.279059" rpy="-2.05754 0.717891 1.83425" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.133011 -0.0128123 0.279059" rpy="-2.05754 0.717891 1.83425" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0611009 -0.0542562 0.272721" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0611009 -0.0542562 0.272721" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.102931 -0.00711424 0.304193" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.102931 -0.00711424 0.304193" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0892099 -0.0974395 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0892099 -0.0974395 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.134193 -0.0340993 0.294696" rpy="-0.387649 0.370925 2.0223" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.134193 -0.0340993 0.294696" rpy="-0.387649 0.370925 2.0223" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0807333 -0.0471615 0.0516929" rpy="-0.784949 7.66892e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/neo550.stl"/>
+</geometry>
+<material name="neo550_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0807333 -0.0471615 0.0516929" rpy="-0.784949 7.66892e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/neo550.stl"/>
+</geometry>
+<material name="neo550_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 -0.0559859" rpy="-1.5708 4.78877e-16 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/24t_htd_pulley_9mm.stl"/>
+</geometry>
+<material name="24t_htd_pulley_9mm_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 -0.0559859" rpy="-1.5708 4.78877e-16 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/24t_htd_pulley_9mm.stl"/>
+</geometry>
+<material name="24t_htd_pulley_9mm_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0893115 -0.00788156 0.339491" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/ibl-a01_open.stl"/>
+</geometry>
+<material name="ibl-a01_open_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0893115 -0.00788156 0.339491" rpy="2.34196 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/ibl-a01_open.stl"/>
+</geometry>
+<material name="ibl-a01_open_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.028848 -0.123256 0.0516929" rpy="1.5708 -1.33743 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchencodercoupler.stl"/>
+</geometry>
+<material name="shoulderpitchencodercoupler_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.028848 -0.123256 0.0516929" rpy="1.5708 -1.33743 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchencodercoupler.stl"/>
+</geometry>
+<material name="shoulderpitchencodercoupler_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0371986" rpy="2.40948 -1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0371986" rpy="2.40948 -1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0373046 -0.0462749 0.278766" rpy="-4.96982e-14 1.21076 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wristmountbracket.stl"/>
+</geometry>
+<material name="wristmountbracket_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0373046 -0.0462749 0.278766" rpy="-4.96982e-14 1.21076 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wristmountbracket.stl"/>
+</geometry>
+<material name="wristmountbracket_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.125356 -0.018032 0.275571" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/ibl-a01_open.stl"/>
+</geometry>
+<material name="ibl-a01_open_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.125356 -0.018032 0.275571" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/ibl-a01_open.stl"/>
+</geometry>
+<material name="ibl-a01_open_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 -0.0407984" rpy="3.14159 -5.84958e-17 -1.71336" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 -0.0407984" rpy="3.14159 -5.84958e-17 -1.71336" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0915236 0.0126729 0.318352" rpy="-1.41247 0.507901 -3.09889" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0915236 0.0126729 0.318352" rpy="-1.41247 0.507901 -3.09889" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.122863 0.00868988 0.273979" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.122863 0.00868988 0.273979" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.141652 0.0210097 0.347613" rpy="0.397712 0.360033 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_spd-a01.stl"/>
+</geometry>
+<material name="pr33_spd-a01_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.141652 0.0210097 0.347613" rpy="0.397712 0.360033 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_spd-a01.stl"/>
+</geometry>
+<material name="pr33_spd-a01_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0885537 -0.0492471 0.322164" rpy="-2.75394 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0885537 -0.0492471 0.322164" rpy="-2.75394 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.128681 -0.0157649 0.277086" rpy="-2.64989 0.728459 -0.629856" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.128681 -0.0157649 0.277086" rpy="-2.64989 0.728459 -0.629856" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 -0.0664109" rpy="1.5708 -1.91053e-15 2.47543" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 -0.0664109" rpy="1.5708 -1.91053e-15 2.47543" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.104853 -0.0538372 0.293259" rpy="-0.397712 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.104853 -0.0538372 0.293259" rpy="-0.397712 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.163586 0.0148328 0.308716" rpy="2.74388 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_spd-a01.stl"/>
+</geometry>
+<material name="pr33_spd-a01_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.163586 0.0148328 0.308716" rpy="2.74388 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_spd-a01.stl"/>
+</geometry>
+<material name="pr33_spd-a01_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0407984" rpy="-3.14159 6.52412e-16 9.27658e-32" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0407984" rpy="-3.14159 6.52412e-16 9.27658e-32" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0502732 -0.126566 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0502732 -0.126566 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0866374 -0.0577126 0.315763" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0866374 -0.0577126 0.315763" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0963906 -0.00634711 0.313143" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0963906 -0.00634711 0.313143" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0224229 -0.0562577 0.258073" rpy="-2.34524 -1.04283 2.87089" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/forearmbodystandoff.stl"/>
+</geometry>
+<material name="forearmbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0224229 -0.0562577 0.258073" rpy="-2.34524 -1.04283 2.87089" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/forearmbodystandoff.stl"/>
+</geometry>
+<material name="forearmbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0892927 -0.00785711 0.339638" rpy="-2.70004 0.601648 -0.710937" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0892927 -0.00785711 0.339638" rpy="-2.70004 0.601648 -0.710937" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.064734 -0.070626 0.0516929" rpy="9.04734e-15 0.785398 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-002_rev1.stl"/>
+</geometry>
+<material name="217-2625-002_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.064734 -0.070626 0.0516929" rpy="9.04734e-15 0.785398 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-002_rev1.stl"/>
+</geometry>
+<material name="217-2625-002_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0546971 -0.0586226 0.293311" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0546971 -0.0586226 0.293311" rpy="-0.360033 1.31264e-14 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0564744 -0.138056 0.230135" rpy="-1.5708 -0.172897 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_w-idle_alt2_36.stl"/>
+</geometry>
+<material name="dc12_w-idle_alt2_36_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0564744 -0.138056 0.230135" rpy="-1.5708 -0.172897 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_w-idle_alt2_36.stl"/>
+</geometry>
+<material name="dc12_w-idle_alt2_36_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0718041 -0.060257 0.0516929" rpy="-1.05608e-14 -0.785398 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0718041 -0.060257 0.0516929" rpy="-1.05608e-14 -0.785398 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 0.0229016" rpy="-1.5708 7.13515e-16 -0.591046" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/rs_550_motor_mounting_plate.stl"/>
+</geometry>
+<material name="rs_550_motor_mounting_plate_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 0.0229016" rpy="-1.5708 7.13515e-16 -0.591046" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/rs_550_motor_mounting_plate.stl"/>
+</geometry>
+<material name="rs_550_motor_mounting_plate_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.113465 -0.0256255 0.313001" rpy="-2.36721 1.04279 -0.270775" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.113465 -0.0256255 0.313001" rpy="-2.36721 1.04279 -0.270775" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m3.stl"/>
+</geometry>
+<material name="nut2_m3_material">
+<color rgba="0.866667 0.321569 0.156863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0812967 -0.0463353 0.0516929" rpy="3.14159 -0.785398 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-001_rev1.stl"/>
+</geometry>
+<material name="217-2625-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0812967 -0.0463353 0.0516929" rpy="3.14159 -0.785398 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-001_rev1.stl"/>
+</geometry>
+<material name="217-2625-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0952605 0.0212479 0.334217" rpy="1.89272 1.1903 0.94331" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0952605 0.0212479 0.334217" rpy="1.89272 1.1903 0.94331" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.111043 -0.0275798 0.335751" rpy="-1.72912 -0.507901 0.042704" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.111043 -0.0275798 0.335751" rpy="-1.72912 -0.507901 0.042704" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0646495 -0.0707499 0.0516929" rpy="-3.14159 0.785398 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0646495 -0.0707499 0.0516929" rpy="-3.14159 0.785398 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2816-001_rev1.stl"/>
+</geometry>
+<material name="217-2816-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.10788 -0.0266892 0.341359" rpy="-2.75394 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10788 -0.0266892 0.341359" rpy="-2.75394 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0625706 -0.0836326 0.0834153" rpy="1.74369 -8.84401e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0625706 -0.0836326 0.0834153" rpy="1.74369 -8.84401e-15 -0.972353" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt.stl"/>
+</geometry>
+<material name="10-32_x_0.75in_buttonhead_locking_screw_mcmaster_92360a252.sldprt_material">
+<color rgba="0.776471 0.756863 0.737255 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0386856 -0.108828 0.0516929" rpy="1.5708 0.610312 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0386856 -0.108828 0.0516929" rpy="1.5708 0.610312 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5_hexbearing_1.125_od.stl"/>
+</geometry>
+<material name=".5_hexbearing_1.125_od_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.100421 -0.0110826 0.319898" rpy="0.799629 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/irb-a01_open.stl"/>
+</geometry>
+<material name="irb-a01_open_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.100421 -0.0110826 0.319898" rpy="0.799629 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/irb-a01_open.stl"/>
+</geometry>
+<material name="irb-a01_open_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.109458 -0.0205377 0.309955" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.109458 -0.0205377 0.309955" rpy="1.95805 -0.368432 -1.1182" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2x4_1.stl"/>
+</geometry>
+<material name="wbh_m2x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0823888 -0.100051 0.230135" rpy="-1.5708 0.172897 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_w-idle_alt2_36.stl"/>
+</geometry>
+<material name="dc12_w-idle_alt2_36_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0823888 -0.100051 0.230135" rpy="-1.5708 0.172897 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_w-idle_alt2_36.stl"/>
+</geometry>
+<material name="dc12_w-idle_alt2_36_material">
+<color rgba="0.105882 0.372549 0.666667 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.123376 -0.0429523 0.308697" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.123376 -0.0429523 0.308697" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0632955 -0.135445 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0632955 -0.135445 0.207481" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.114674 0.00615345 0.277297" rpy="-0.387649 0.370925 2.0223" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.114674 0.00615345 0.277297" rpy="-0.387649 0.370925 2.0223" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0950937 -0.0337108 0.284559" rpy="-0.397712 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0950937 -0.0337108 0.284559" rpy="-0.397712 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x4_1.stl"/>
+</geometry>
+<material name="wbh_m2_5x4_1_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.142382 -0.0315628 0.291378" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.142382 -0.0315628 0.291378" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0221986" rpy="-2.69161 1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0221986" rpy="-2.69161 1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2742.stl"/>
+</geometry>
+<material name="217-2742_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0341756 -0.103853 0.0881273" rpy="-3.14159 -1.3979 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchbracketrev2.stl"/>
+</geometry>
+<material name="shoulderpitchbracketrev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0341756 -0.103853 0.0881273" rpy="-3.14159 -1.3979 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderpitchbracketrev2.stl"/>
+</geometry>
+<material name="shoulderpitchbracketrev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0926365 -0.00561444 0.341006" rpy="-0.488959 0.722655 1.83088" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0926365 -0.00561444 0.341006" rpy="-0.488959 0.722655 1.83088" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ifb-a01.stl"/>
+</geometry>
+<material name="pr33_ifb-a01_material">
+<color rgba="0.85098 0.756863 0.870588 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0902245 0.0178812 0.331859" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0902245 0.0178812 0.331859" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 0.0129016" rpy="-2.16184 -1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/neo550.stl"/>
+</geometry>
+<material name="neo550_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 0.0129016" rpy="-2.16184 -1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/neo550.stl"/>
+</geometry>
+<material name="neo550_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.130177 -0.00888522 0.291324" rpy="2.74388 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/igp-a01_open.stl"/>
+</geometry>
+<material name="igp-a01_open_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.130177 -0.00888522 0.291324" rpy="2.74388 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/igp-a01_open.stl"/>
+</geometry>
+<material name="igp-a01_open_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 -0.0664109" rpy="1.5708 -1.26563e-14 1.12204" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 -0.0664109" rpy="1.5708 -1.26563e-14 1.12204" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0767814 -0.0472721 0.295799" rpy="-1.18315 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/gripperattachment.stl"/>
+</geometry>
+<material name="gripperattachment_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0767814 -0.0472721 0.295799" rpy="-1.18315 -0.370925 -1.11929" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/gripperattachment.stl"/>
+</geometry>
+<material name="gripperattachment_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 -0.0915984" rpy="3.12908e-16 2.95481e-16 0.979301" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/prototypestand1.stl"/>
+</geometry>
+<material name="prototypestand1_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 -0.0915984" rpy="3.12908e-16 2.95481e-16 0.979301" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/prototypestand1.stl"/>
+</geometry>
+<material name="prototypestand1_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.119892 -0.0212435 0.315929" rpy="-1.08135 0.723701 -0.633255" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ilr-a01.stl"/>
+</geometry>
+<material name="pr33_ilr-a01_material">
+<color rgba="0.811765 0.858824 0.898039 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.119892 -0.0212435 0.315929" rpy="-1.08135 0.723701 -0.633255" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/pr33_ilr-a01.stl"/>
+</geometry>
+<material name="pr33_ilr-a01_material">
+<color rgba="0.811765 0.858824 0.898039 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0154984" rpy="-1.5708 -4.62858e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-002_rev1.stl"/>
+</geometry>
+<material name="217-2625-002_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0154984" rpy="-1.5708 -4.62858e-16 -0.591496" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-002_rev1.stl"/>
+</geometry>
+<material name="217-2625-002_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.127889 0.0121169 0.276269" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.127889 0.0121169 0.276269" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/nut2_m2_5_1.stl"/>
+</geometry>
+<material name="nut2_m2_5_1_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.106296 -0.00216024 0.333673" rpy="-0.397712 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/igp-a01_open.stl"/>
+</geometry>
+<material name="igp-a01_open_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.106296 -0.00216024 0.333673" rpy="-0.397712 -0.360033 0.598443" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/igp-a01_open.stl"/>
+</geometry>
+<material name="igp-a01_open_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0568764 -0.0821498 0.0516929" rpy="-3.14159 0.960485 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-003_rev1.stl"/>
+</geometry>
+<material name="217-2625-003_rev1_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0568764 -0.0821498 0.0516929" rpy="-3.14159 0.960485 -2.54315" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-003_rev1.stl"/>
+</geometry>
+<material name="217-2625-003_rev1_material">
+<color rgba="0.25098 0.25098 0.25098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.109744 -0.0223715 0.349258" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.109744 -0.0223715 0.349258" rpy="-0.799629 1.04086 -0.2745" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x8.stl"/>
+</geometry>
+<material name="wbh_m2_5x8_material">
+<color rgba="1 0.756863 0.054902 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.10889 0.00476902 0.305688" rpy="-2.05754 0.717891 1.83425" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10889 0.00476902 0.305688" rpy="-2.05754 0.717891 1.83425" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m3x10.stl"/>
+</geometry>
+<material name="wbh_m3x10_material">
+<color rgba="0.564706 0.811765 0.945098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0664109" rpy="-1.5708 -5.74653e-16 -2.76056" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0664109" rpy="-1.5708 -5.74653e-16 -2.76056" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0492094 -0.136007 0.189155" rpy="2.98253 0.0680497 2.57015" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/armbodystandoff.stl"/>
+</geometry>
+<material name="armbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0492094 -0.136007 0.189155" rpy="2.98253 0.0680497 2.57015" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/armbodystandoff.stl"/>
+</geometry>
+<material name="armbodystandoff_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.050972 -0.0908091 0.0131766" rpy="1.32137e-16 -4.09591e-16 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderbaseplaterev2.stl"/>
+</geometry>
+<material name="shoulderbaseplaterev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.050972 -0.0908091 0.0131766" rpy="1.32137e-16 -4.09591e-16 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderbaseplaterev2.stl"/>
+</geometry>
+<material name="shoulderbaseplaterev2_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 0.0139016" rpy="-1.5708 -9.38059e-16 2.5501" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-001_rev1.stl"/>
+</geometry>
+<material name="217-2625-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 0.0139016" rpy="-1.5708 -9.38059e-16 2.5501" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/217-2625-001_rev1.stl"/>
+</geometry>
+<material name="217-2625-001_rev1_material">
+<color rgba="0.866667 0.909804 1 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.081081 -0.124245 -0.0775141" rpy="0.591496 1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderyawencoderplate.stl"/>
+</geometry>
+<material name="shoulderyawencoderplate_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.081081 -0.124245 -0.0775141" rpy="0.591496 1.5708 0" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/shoulderyawencoderplate.stl"/>
+</geometry>
+<material name="shoulderyawencoderplate_material">
+<color rgba="0.411765 0.411765 0.411765 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="-0.0694273 -0.0984747 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0694273 -0.0984747 0.210233" rpy="-1.74369 8.84401e-15 2.16924" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/92290a752_type_316_ss_socket_head_cap_screw.stl"/>
+</geometry>
+<material name="92290a752_type_316_ss_socket_head_cap_screw_material">
+<color rgba="0.956863 0.956863 0.956863 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.10711 -0.00940837 0.294198" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10711 -0.00940837 0.294198" rpy="-2.34196 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/wbh_m2_5x10.stl"/>
+</geometry>
+<material name="wbh_m2_5x10_material">
+<color rgba="0.376471 0.415686 0.45098 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0312733 0.0316299 -0.0664109" rpy="-1.5708 -5.74653e-16 -2.76056" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0312733 0.0316299 -0.0664109" rpy="-1.5708 -5.74653e-16 -2.76056" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/.5in_hex_collar.stl"/>
+</geometry>
+<material name=".5in_hex_collar_material">
+<color rgba="0.0392157 0.0392157 0.0392157 1.0"/>
+</material>
+</collision>
+<visual>
+<origin xyz="0.0810757 -0.0271831 0.282282" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0810757 -0.0271831 0.282282" rpy="2.37043 -1.04086 2.86709" />
+<geometry>
+<mesh filename="package://urdf_tutorial/urdf/right-arm/dc12_a01_spacer_ring.stl"/>
+</geometry>
+<material name="dc12_a01_spacer_ring_material">
+<color rgba="0.603922 0.647059 0.686275 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+
+</robot>

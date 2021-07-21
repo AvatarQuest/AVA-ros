@@ -52,3 +52,4 @@ CATKIN_IGNORE
 CMakeFiles
 */build
 ros_control-melodic-devel/*
+moveit_setup_assistant/*
