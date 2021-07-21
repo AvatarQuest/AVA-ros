@@ -2217,7 +2217,7 @@
    </link>
    <joint name="wrist" type="continuous">
       <origin xyz="4.16334e-16 -0.178438 0.03" rpy="-1.5708 1.5708 0" />
-      s
+
       <parent link="link_forearm" />
       <child link="link_claw" />
       <axis xyz="0 0 1" />
@@ -2249,55 +2249,49 @@
       <joint_properties friction="0.0" />
    </joint>
 
-   <transmission name="yaw_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="shoulder_yaw">
-         <hardwareInterface>EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="yaw_nema">
-         <mechanicalReduction>50</mechanicalReduction>
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </actuator>
-   </transmission>
-
-   <transmission name="pitch_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="shoulder_pitch">
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="pitch_nema">
-         <mechanicalReduction>50</mechanicalReduction>
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </actuator>
-   </transmission>
-
-   <transmission name="elbow_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="elbow">
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="elbow_dynamixel">
-         <mechanicalReduction>50</mechanicalReduction>
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </actuator>
-   </transmission>
-
-   <transmission name="wrist_trans">
+   <transmission name="trans_wrist">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="wrist">
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
-      <actuator name="wrist_dynamixel">
-         <mechanicalReduction>50</mechanicalReduction>
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <actuator name="wrist_motor">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
       </actuator>
-   </transmission>
-
-   <gazebo>
+  </transmission>
+  <transmission name="trans_elbow">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="elbow">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="elbow_motor">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+   <transmission name="trans_shoulder_pitch">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="shoulder_pitch">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="shoulder_pitch_motor">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="trans_shoulder_yaw">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="shoulder_yaw">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="shoulder_yaw_motor">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/jacker</robotNamespace>
-       <robotParam>/jacker/robot_description</robotParam>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+          <robotNamespace>/</robotNamespace>
       </plugin>
-   </gazebo>
+  </gazebo>
 </robot> 
