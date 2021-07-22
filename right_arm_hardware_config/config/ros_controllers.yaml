@@ -24,8 +24,37 @@ right_arm_position_trajectory_controller:
     - elbow
     - wrist
 
-right_arm_position_controller:
-  type: position_controllers/JointTrajectoryController
+right_arm_position_group_controller:
+  type: position_controllers/JointGroupPositionController
+  joints:
+    - shoulder_yaw 
+    - shoulder_pitch 
+    - elbow
+    - wrist
+  gains:
+    shoulder_yaw:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    shoulder_pitch:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    elbow:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    wrist:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+right_arm_effort_controller:
+  type: effort_controller/JointEffortController
   joints:
     - shoulder_pitch
     - elbow
@@ -37,7 +66,8 @@ joint_state_controller:
   publish_rate: 50
 
 controller_list:
-  - name: right_arm_position_controller
+
+  - name: right_arm_position_group_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
@@ -46,6 +76,17 @@ controller_list:
       - elbow
       - wrist
       - shoulder_yaw
+
+
+  # - name: right_arm_position_trajectory_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints:
+  #     - shoulder_pitch
+  #     - elbow
+  #     - wrist
+  #     - shoulder_yaw
 
 /gazebo_ros_control:   
   pid_gains:
