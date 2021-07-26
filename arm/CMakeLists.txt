@@ -17,6 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
   dynamixel_sdk
   moveit_ros_planning_interface
   moveit_servo
+  controller_manager
+  controller_interface
+  hardware_interface
   #  moveit_visual_tools
   # Eigen3
 )
@@ -171,9 +174,9 @@ add_executable(estop src/estop.cpp)
 target_link_libraries(estop ${catkin_LIBRARIES})
 add_dependencies(estop ${catkin_EXPORTED_TARGETS})
 
-# add_executable(hardware_interface src/hardware_interface.cpp)
-#target_link_libraries(hardware_interface ${catkin_LIBRARIES})
-# add_dependencies(hardware_interface ${catkin_EXPORTED_TARGETS})
+add_executable(right_arm_hardware_interface src/hardware_interface.cpp)
+target_link_libraries(right_arm_hardware_interface ${catkin_LIBRARIES})
+add_dependencies(right_arm_hardware_interface ${catkin_EXPORTED_TARGETS})
 
 # add_executable(joystick src/joystick.cpp)
 # target_link_libraries(joystick ${catkin_LIBRARIES} ${Boost_LIBRARIES})

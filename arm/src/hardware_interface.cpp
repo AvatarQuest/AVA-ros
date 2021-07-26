@@ -1,19 +1,26 @@
+#include "ros/ros.h"
 #include <hardware_interface/joint_command_interface.h>
 #include <hardware_interface/joint_state_interface.h>
 #include <hardware_interface/robot_hw.h>
+#include <controller_manager/controller_manager.h>
+
  
-class RightArm : public hardware_interface::RobotHW
-{
+class RightArm : public hardware_interface::RobotHW, public hardware_interface::HardwareInterface {
 public:
-  RightArm() 
-  { 
+  RightArm() { 
+    // Initialization of the robot's resources (joints, sensors, actuators) and
+    // interfaces can be done here or inside init().
+    // E.g. parse the URDF for joint names & interfaces, then initialize them
+  }
+
+  ~RightArm() { 
+    //deinit
     // Initialization of the robot's resources (joints, sensors, actuators) and
     // interfaces can be done here or inside init().
     // E.g. parse the URDF for joint names & interfaces, then initialize them
   }
  
-  bool init(ros::NodeHandle &root_nh, ros::NodeHandle &robot_hw_nh)
-  {
+  bool init(ros::NodeHandle &root_nh, ros::NodeHandle &robot_hw_nh) {
     // Create a JointStateHandle for each joint and register them with the 
     // JointStateInterface.
     hardware_interface::JointStateHandle state_handle_shoulder_yaw("shoulder_yaw", &pos[0], &vel[0], &eff[0]);
@@ -30,7 +37,6 @@ public:
     // Register the JointStateInterface containing the read only joints
     // with this robot's hardware_interface::RobotHW.
     registerInterface(&jnt_state_interface);
- 
     // Create a JointHandle (read and write) for each controllable joint
     // using the read-only joint handles within the JointStateInterface and 
     // register them with the JointPositionInterface.
@@ -51,6 +57,15 @@ public:
  
     return true;
   }
+
+  void write() {
+  }
+
+  void read() {
+    for (auto c : cmd) {
+      ROS_WARN("COMMAND: %.2f", c);
+    }
+  }
  
 private:
   // hardware_interface::JointStateInterface gives read access to all joint values 
@@ -66,10 +81,32 @@ private:
  
   // Data member array to store the controller commands which are sent to the 
   // robot's resources (joints, actuators)
-  double cmd[4];
+  double cmd[4] = {3, 4, 5, 3};
  
   // Data member arrays to store the state of the robot's resources (joints, sensors)
   double pos[4];
   double vel[4];
   double eff[4];
 };
+
+int main(int argc, char** argv)
+{
+  ros::init(argc, argv, "right_arm_hardware_interface");
+  ros::AsyncSpinner spinner(1);
+  spinner.start();
+
+  RightArm arm;
+  arm.init()
+  controller_manager::ControllerManager cm(&arm);
+  ros::Rate rate(10);
+
+  while (ros::ok())
+  {
+     arm.read();
+     cm.update(ros::Time::now(), rate.expectedCycleTime());
+     arm.write();
+     rate.sleep();
+  }
+
+  spinner.stop();
+}
