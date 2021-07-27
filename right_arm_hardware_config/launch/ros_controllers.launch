@@ -6,7 +6,7 @@
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="joint_state_controller right_arm_position_group_controller "/>
-    <!-- right_arm_position_trajectory_controller -->
+    output="screen" args="joint_state_controller right_arm_trajectory_controller"/>
+    <!--  right_arm_position_group_controller -->
 
 </launch>
