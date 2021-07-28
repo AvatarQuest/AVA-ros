@@ -286,10 +286,8 @@ void ServoCalcs::calculateSingleIteration()
     joint_servo_cmd_ = *latest_joint_cmd_;
 
   // Check for stale cmds
-  twist_command_is_stale_ =
-      ((ros::Time::now() - latest_twist_command_stamp_) >= ros::Duration(parameters_.incoming_command_timeout));
-  joint_command_is_stale_ =
-      ((ros::Time::now() - latest_joint_command_stamp_) >= ros::Duration(parameters_.incoming_command_timeout));
+  twist_command_is_stale_ = false; // ((ros::Time::now() - latest_twist_command_stamp_) >= ros::Duration(parameters_.incoming_command_timeout));
+  joint_command_is_stale_ = false; // ((ros::Time::now() - latest_joint_command_stamp_) >= ros::Duration(parameters_.incoming_command_timeout));
 
   have_nonzero_twist_stamped_ = latest_nonzero_twist_stamped_;
   have_nonzero_joint_command_ = latest_nonzero_joint_cmd_;

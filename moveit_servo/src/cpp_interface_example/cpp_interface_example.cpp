@@ -141,13 +141,12 @@ int main(int argc, char** argv)
     // Because this message is not copied we should not modify it after we send it.
     auto msg = moveit::util::make_shared_from_pool<control_msgs::JointJog>();
     msg->header.stamp = ros::Time::now();
-    msg->joint_names.push_back("wrist");
+    msg->joint_names.push_back("elbow_joint");
     msg->velocities.push_back(0.2);
 
     // Send the message
     joint_servo_pub.publish(msg);
     cmd_rate.sleep();
-    ROS_WARN("Command: %d", num_commands);
     ++num_commands;
   }
 

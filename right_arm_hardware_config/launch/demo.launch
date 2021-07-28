@@ -9,7 +9,7 @@
   <arg name="db_path" default="$(find right_arm_hardware_config)/default_warehouse_mongo_db" />
 
   <!-- By default, we are not in debug mode -->
-  <arg name="debug" default="false" />
+  <arg name="debug" default="true" />
 
   <!-- By default, we will load or override the robot_description -->
   <arg name="load_robot_description" default="true"/>
@@ -34,10 +34,10 @@
 
   <!-- We do not have a robot connected, so publish fake joint states -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" unless="$(arg use_gui)">
-    <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam>
+    <!-- <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam> -->
   </node>
   <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg use_gui)">
-    <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam>
+    <!-- <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam> -->
   </node>
 
   <!-- Given the published joint states, publish tf for the robot links -->
@@ -46,7 +46,7 @@
   <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
   <include file="$(dirname)/move_group.launch">
     <arg name="allow_trajectory_execution" value="true"/>
-    <arg name="fake_execution" value="true"/>
+    <arg name="fake_execution" value="false"/>
     <arg name="execution_type" value="$(arg execution_type)"/>
     <arg name="info" value="true"/>
     <arg name="debug" value="$(arg debug)"/>

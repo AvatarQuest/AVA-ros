@@ -20,6 +20,11 @@ find_package(catkin REQUIRED COMPONENTS
   controller_manager
   controller_interface
   hardware_interface
+  actionlib
+  actionlib_msgs
+  control_msgs
+  trajectory_msgs
+  
   #  moveit_visual_tools
   # Eigen3
 )
@@ -178,9 +183,10 @@ add_executable(right_arm_hardware_interface src/hardware_interface.cpp)
 target_link_libraries(right_arm_hardware_interface ${catkin_LIBRARIES})
 add_dependencies(right_arm_hardware_interface ${catkin_EXPORTED_TARGETS})
 
-# add_executable(joystick src/joystick.cpp)
-# target_link_libraries(joystick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-# install(TARGETS joystick DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+add_executable(action_client src/action_client.cpp)
+target_link_libraries(action_client ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+add_dependencies(action_client ${catkin_EXPORTED_TARGETS})
 
 #add_executable(servo_server src/servo_server.cpp)
 #target_link_libraries(servo_server ${catkin_LIBRARIES} ${Boost_LIBRARIES})
