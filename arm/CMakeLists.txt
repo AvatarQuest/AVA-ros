@@ -17,6 +17,14 @@ find_package(catkin REQUIRED COMPONENTS
   dynamixel_sdk
   moveit_ros_planning_interface
   moveit_servo
+  controller_manager
+  controller_interface
+  hardware_interface
+  actionlib
+  actionlib_msgs
+  control_msgs
+  trajectory_msgs
+  
   #  moveit_visual_tools
   # Eigen3
 )
@@ -113,7 +121,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+ INCLUDE_DIRS include
 #  LIBRARIES arm
 #  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs urdf
 #  DEPENDS system_lib
@@ -171,13 +179,14 @@ add_executable(estop src/estop.cpp)
 target_link_libraries(estop ${catkin_LIBRARIES})
 add_dependencies(estop ${catkin_EXPORTED_TARGETS})
 
-# add_executable(hardware_interface src/hardware_interface.cpp)
-#target_link_libraries(hardware_interface ${catkin_LIBRARIES})
-# add_dependencies(hardware_interface ${catkin_EXPORTED_TARGETS})
+add_executable(right_arm_hardware_interface src/hardware_interface.cpp)
+target_link_libraries(right_arm_hardware_interface ${catkin_LIBRARIES})
+add_dependencies(right_arm_hardware_interface ${catkin_EXPORTED_TARGETS})
 
-# add_executable(joystick src/joystick.cpp)
-# target_link_libraries(joystick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-# install(TARGETS joystick DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+add_executable(action_client src/action_client.cpp)
+target_link_libraries(action_client ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+add_dependencies(action_client ${catkin_EXPORTED_TARGETS})
 
 #add_executable(servo_server src/servo_server.cpp)
 #target_link_libraries(servo_server ${catkin_LIBRARIES} ${Boost_LIBRARIES})
