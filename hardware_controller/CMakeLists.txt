@@ -8,8 +8,8 @@ project(hardware_controller)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  controller_interface
-  hardware_interface
+  # controller_interface
+  # hardware_interface
   pluginlib
   roscpp
 )
@@ -191,9 +191,9 @@ include_directories(
 #   # myfile1
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
-add_executable(hardware_interface src/hardware_interface.cpp)
-target_link_libraries(hardware_interface ${catkin_LIBRARIES})
+# # )
+# add_executable(hardware_interface src/hardware_interface.cpp)
+# target_link_libraries(hardware_interface ${catkin_LIBRARIES})
 
 #############
 ## Testing ##
