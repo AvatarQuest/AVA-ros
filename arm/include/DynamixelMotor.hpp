@@ -46,6 +46,7 @@ typedef struct XM430W350T_TABLE: AddressTableBase {
     }
 } XM430W350T_TABLE;
 
+
 /**
  * @brief A class to easily control a single dynamixel motor
  */
