@@ -54,6 +54,6 @@ void loop() {
         delay(1);
       }
   }
-  nodehandle.spinOnce();
   delay(1);
+  nodehandle.spinOnce();
 }
