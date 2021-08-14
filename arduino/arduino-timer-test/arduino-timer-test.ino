@@ -1,3 +1,5 @@
+#include <ros.h>
+#include <std_msgs/Int32.h>
 #include <arduino-timer.h>
 #include <RotaryEncoder.h>
 
@@ -10,16 +12,38 @@
 
 #define MIN_PULSE_INTERVAL 100
 #define DEADZONE 5
-Timer<3, micros> timer;
+Timer<4, micros> timer;
 
-int encoder_position = 0, goal_position = 0, calls = 0, pulse_delay = 400;
-bool pulse = false, pulse_value = HIGH, current_direction = LOW;
+int encoder_position = 0, goal_position = 0, calls = 0, pulse_delay = 500;
+bool pulse = false, reached_position = false, pulse_value = HIGH, current_direction = LOW;
 
 RotaryEncoder encoder(CHANNEL_A, CHANNEL_B, RotaryEncoder::LatchMode::TWO03);
+ros::NodeHandle nh;
+std_msgs::Int32 int_msg;
+
+ros::Publisher encoder_value("right_arm_pitch_position", &int_msg);
+
+void callback(const std_msgs::Int32& msg) {
+  goal_position = msg.data;
+  current_direction = goal_position < encoder_position;
+  reached_position = false; 
+}
 
 void checkPosition() {
-//  Serial.println("dshfjdsahfjkdsa");
-  encoder.tick();
+  encoder.tick(); 
+  encoder_position = encoder.getPosition();
+  
+  if (abs(goal_position - encoder_position) < DEADZONE) {
+    reached_position = true; 
+  }
+
+  return true;
+}
+
+void send_encoder_data() {
+  int_msg.data = encoder_position;
+  encoder_value.publish(&int_msg);
+  return true;
 }
 
 bool motor_call(){
@@ -30,25 +54,16 @@ bool motor_call(){
   return true;
 }
 
-bool read_pos() {
-  Serial.println( encoder.getPosition() / 50);
-  return true;
-}
-
-bool change_pd(){
-  if(millis() >= 4000) { 
-    pulse_delay = 1000;
-    current_direction = HIGH;
-  }
-  return true;
-}
+ros::Subscriber<std_msgs::Int32> arm_pitch_position("set_right_arm_pitch_position", &callback);
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println("i hope this works! :D");
   //setting the pins to output for the motor
-  while (!nodehandle.connected()) {
-    nodehandle.spinOnce();
+  nh.initNode();
+  nh.subscribe(arm_pitch_position);
+  nh.advertise(encoder_value);
+  
+  while (!nh.connected()) {
+    nh.spinOnce();
     delay(1);
   }
   
@@ -57,28 +72,21 @@ void setup() {
 
   attachInterrupt(digitalPinToInterrupt(CHANNEL_A), checkPosition, CHANGE);
   attachInterrupt(digitalPinToInterrupt(CHANNEL_B), checkPosition, CHANGE);
-//  attachInterrupt(digitalPinToInterrupt(INDEX), rotation, CHANGE);
 
-  
   timer.every(100, motor_call);
-  timer.every(100, change_pd);
-  timer.every(100000, read_pos);
-
-  
-
+  timer.every(200000, send_encoder_data);
 }
 
-
 void loop() {
-   if (!nodehandle.connected()) return;
   timer.tick<void>();
-//  encoder.tick();
+
   digitalWrite(DIRECTION, current_direction);
-  if (pulse) {
-    digitalWrite(PULSE, pulse_value);
-    pulse = false;
-    pulse_value = !pulse_value;
-//    Serial.println(pulse_value ? "HIGH" : "LOW");  
+  if (!reached_position) {
+    if (pulse) {
+      digitalWrite(PULSE, pulse_value);
+      pulse = false;
+      pulse_value = !pulse_value;  
+    }
   }
   nh.spinOnce();
 }

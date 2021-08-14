@@ -188,9 +188,13 @@ add_executable(action_client src/action_client.cpp)
 target_link_libraries(action_client ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 add_dependencies(action_client ${catkin_EXPORTED_TARGETS})
 
-add_executable(test src/test_dynamixel.cpp)
-target_link_libraries(test ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-add_dependencies(test ${catkin_EXPORTED_TARGETS})
+add_executable(hi5_receive src/hi5_receive.cpp)
+target_link_libraries(hi5_receive ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+add_dependencies(hi5_receive ${catkin_EXPORTED_TARGETS})
+
+# add_executable(test src/test_dynamixel.cpp)
+# target_link_libraries(test ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+# add_dependencies(test ${catkin_EXPORTED_TARGETS})
 
 #add_executable(servo_server src/servo_server.cpp)
 #target_link_libraries(servo_server ${catkin_LIBRARIES} ${Boost_LIBRARIES})
