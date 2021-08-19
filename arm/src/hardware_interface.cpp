@@ -33,7 +33,7 @@ RightArm::RightArm() {
   hardware_interface::JointHandle pos_handle_shoulder_yaw(jnt_state_interface.getHandle("shoulder_yaw"), &cmd[0]);
   jnt_pos_interface.registerHandle(pos_handle_shoulder_yaw);
 
-  ROS_ERROR("MADE IT HERE");
+  // ROS_ERROR("MADE IT HERE");
 
   hardware_interface::JointHandle pos_handle_shoulder_pitch(jnt_state_interface.getHandle("shoulder_pitch"), &cmd[1]);
   jnt_pos_interface.registerHandle(pos_handle_shoulder_pitch);
@@ -53,8 +53,23 @@ RightArm::~RightArm() {}
 bool RightArm::init(ros::NodeHandle &root_nh, ros::NodeHandle &robot_hw_nh) {}
 
 void RightArm::write() {
-  for (auto c : pos) {
-    ROS_WARN("COMMAND: %.2f", c);
+  for (int i = 0; i < sizeof(cmd)/sizeof(cmd[0]); i++) {
+    switch(i) {
+      case 0:
+        //shoulder yaw
+        break;
+      case 1:
+        //shoulder_pitch
+        break;
+      case 2:
+        //elbow
+        break;
+      case 3:
+        //wrist
+       break; 
+      default:
+        break;
+    }   
   }
 }
 
