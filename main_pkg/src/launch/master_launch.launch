@@ -1,0 +1,3 @@
+<launch>
+    <node name="start_drivetrain_serial" pkg="main_pkg" type="launch_all.sh" />
+</launch>
