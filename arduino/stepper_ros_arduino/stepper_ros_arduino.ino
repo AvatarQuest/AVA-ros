@@ -1,4 +1,3 @@
-
 #include <ros.h>
 #include <std_msgs/Int32.h>
 #include <arduino-timer.h>
@@ -25,7 +24,7 @@ ros::NodeHandle nh;
 struct PitchMotor {
   int pulse_pin, direction_pin;
   int encoder_position = 0, goal_position = 0, calls = 0, pulse_delay = 500;
-  bool pulse = false, reached_position = false, pulse_value = HIGH, current_direction = LOW;
+  bool pulse = false, reached_position = true, pulse_value = HIGH, current_direction = LOW;
   
   PitchMotor(int pulse_pin, int direction_pin) {
     this->pulse_pin = pulse_pin;
@@ -44,6 +43,9 @@ struct PitchMotor {
   void checkPosition() {
     pitch_encoder.tick(); 
     encoder_position = pitch_encoder.getPosition();
+    if (encoder_position != 0) {
+    } else {
+    }
 
     if (abs(goal_position - encoder_position) < DEADZONE) {
       reached_position = true; 
@@ -74,7 +76,7 @@ struct PitchMotor {
 struct YawMotor {
   int pulse_pin, direction_pin;
   int encoder_position = 0, goal_position = 0, calls = 0, pulse_delay = 500;
-  bool pulse = false, reached_position = false, pulse_value = HIGH, current_direction = LOW;
+  bool pulse = false, reached_position = true, pulse_value = HIGH, current_direction = LOW;
   
   YawMotor(int pulse_pin, int direction_pin) {
     this->pulse_pin = pulse_pin;
@@ -93,9 +95,11 @@ struct YawMotor {
   void checkPosition() {
     yaw_encoder.tick(); 
     encoder_position = yaw_encoder.getPosition();
+    if (encoder_position != 0) {
+    } else {
+    }
 
     if (abs(goal_position - encoder_position) < DEADZONE) {
-      
       reached_position = true; 
     }
   }
@@ -122,7 +126,7 @@ struct YawMotor {
 YawMotor yaw_motor(PULSE_YAW, DIRECTION_YAW);
 PitchMotor pitch_motor(PULSE_PITCH, DIRECTION_PITCH);
 
-Timer<4, micros> timer;
+Timer<5, micros> timer;
 
 std_msgs::Int32 pitch_msg;
 std_msgs::Int32 yaw_msg;
@@ -156,8 +160,12 @@ void send_encoder_data() {
   return true;
 }
 
-bool motor_call(){
+bool yaw_motor_call(){
   yaw_motor.motor_call();
+  return true;
+}
+
+bool pitch_motor_call() {
   pitch_motor.motor_call();
   return true;
 }
@@ -191,8 +199,10 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(CHANNEL_A_YAW), checkYawPosition, CHANGE);
   attachInterrupt(digitalPinToInterrupt(CHANNEL_B_YAW), checkYawPosition, CHANGE);
 
-  timer.every(100, motor_call);
-  timer.every(200000, send_encoder_data);
+  timer.every(100, yaw_motor_call);
+    timer.every(100, pitch_motor_call);
+
+  timer.every(300000, send_encoder_data);
 }
 
 void loop() {

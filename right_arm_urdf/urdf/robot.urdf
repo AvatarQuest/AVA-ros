@@ -2276,7 +2276,7 @@
       </joint>
       <actuator name="shoulder_pitch_motor">
           <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-          <mechanicalReduction>1</mechanicalReduction>
+          <mechanicalReduction>50</mechanicalReduction>
       </actuator>
   </transmission>
   <transmission name="trans_shoulder_yaw">
@@ -2286,7 +2286,7 @@
       </joint>
       <actuator name="shoulder_yaw_motor">
           <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-          <mechanicalReduction>1</mechanicalReduction>
+          <mechanicalReduction>50</mechanicalReduction>
       </actuator>
   </transmission>
   <gazebo>

@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/avatarquest/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/avatarquest/catkin_ws/src/arm/include/**",
+        "/home/avatarquest/catkin_ws/src/moveit_servo/include/**",
+        "/home/avatarquest/catkin_ws/src/moveit_setup_assistant/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

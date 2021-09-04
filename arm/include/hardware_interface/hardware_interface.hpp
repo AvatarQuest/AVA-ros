@@ -3,7 +3,6 @@
 #include <hardware_interface/joint_state_interface.h>
 #include <hardware_interface/robot_hw.h>
 #include <controller_manager/controller_manager.h>
-// #include <various/shit.h>
 
 namespace right_arm {
   class RightArm : public hardware_interface::RobotHW, public hardware_interface::HardwareInterface {
@@ -26,5 +25,11 @@ namespace right_arm {
       double pos[4];
       double vel[4];
       double eff[4];
+
+      ros::Publisher shoulder_yaw_topic;
+      ros::Publisher shoulder_pitch_topic;
+      ros::Publisher wrist_angle_topic;
+      ros::Publisher elbow_angle_topic;
+      ros::Publisher claw_angle_topic;
   };
 }

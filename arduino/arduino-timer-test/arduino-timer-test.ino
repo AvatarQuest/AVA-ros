@@ -15,7 +15,7 @@
 Timer<4, micros> timer;
 
 int encoder_position = 0, goal_position = 0, calls = 0, pulse_delay = 500;
-bool pulse = false, reached_position = false, pulse_value = HIGH, current_direction = LOW;
+bool pulse = false, reached_position = true, pulse_value = HIGH, current_direction = LOW;
 
 RotaryEncoder encoder(CHANNEL_A, CHANNEL_B, RotaryEncoder::LatchMode::TWO03);
 ros::NodeHandle nh;
