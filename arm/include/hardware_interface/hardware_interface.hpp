@@ -26,6 +26,9 @@ namespace right_arm {
       double vel[4];
       double eff[4];
 
+      double cmd_state[4];
+
+      ros::NodeHandle robot_hw_nh;
       ros::Publisher shoulder_yaw_topic;
       ros::Publisher shoulder_pitch_topic;
       ros::Publisher wrist_angle_topic;

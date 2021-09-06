@@ -1,5 +1,7 @@
 #include <ros.h>
 #include <std_msgs/Int32.h>
+#include <std_msgs/Int16.h>
+#include <Servo.h>
 #include <arduino-timer.h>
 #include <RotaryEncoder.h>
 
@@ -12,6 +14,9 @@
 #define PULSE_PITCH 6
 #define DIRECTION_YAW 7
 #define PULSE_YAW 8
+
+#define PAN 11
+#define TILT 12
 
 #define MIN_PULSE_INTERVAL 100
 #define DEADZONE 5
@@ -43,9 +48,6 @@ struct PitchMotor {
   void checkPosition() {
     pitch_encoder.tick(); 
     encoder_position = pitch_encoder.getPosition();
-    if (encoder_position != 0) {
-    } else {
-    }
 
     if (abs(goal_position - encoder_position) < DEADZONE) {
       reached_position = true; 
@@ -95,9 +97,6 @@ struct YawMotor {
   void checkPosition() {
     yaw_encoder.tick(); 
     encoder_position = yaw_encoder.getPosition();
-    if (encoder_position != 0) {
-    } else {
-    }
 
     if (abs(goal_position - encoder_position) < DEADZONE) {
       reached_position = true; 
@@ -128,19 +127,31 @@ PitchMotor pitch_motor(PULSE_PITCH, DIRECTION_PITCH);
 
 Timer<5, micros> timer;
 
+Servo panServo;
+Servo tiltServo;
+
 std_msgs::Int32 pitch_msg;
 std_msgs::Int32 yaw_msg;
 
 ros::Publisher pitch_encoder_value("right_arm_pitch_position", &pitch_msg);
 ros::Publisher yaw_encoder_value("right_arm_yaw_position", &yaw_msg);
 
+void panCallback(const std_msgs::Int16& msg){
+  panServo.write(msg.data);  
+}
+
+void tiltCallback(const std_msgs::Int16& msg){
+  tiltServo.write(msg.data);  
+}
 
 void pitchCB(const std_msgs::Int32& msg) {
-  pitch_motor.setGoalPosition(msg.data);
+  int pitchP = msg.data * (200 * 50/180);
+  pitch_motor.setGoalPosition(pitchP);
 }
 
 void yawCB(const std_msgs::Int32& msg) {
-  yaw_motor.setGoalPosition(msg.data);
+  int yawP = msg.data * (200 * 50 * 1.65/180);
+  yaw_motor.setGoalPosition(yawP);
 }
 
 void checkYawPosition() {
@@ -152,10 +163,10 @@ void checkPitchPosition() {
 }
 
 void send_encoder_data() {
-  pitch_msg.data = pitch_motor.encoder_position;
+  pitch_msg.data = pitch_motor.encoder_position * (180 / (50 * 200));
   pitch_encoder_value.publish(&pitch_msg);
 
-  yaw_msg.data = yaw_motor.encoder_position;
+  yaw_msg.data = yaw_motor.encoder_position * (180 / (200 * 50 * 1.65));
   yaw_encoder_value.publish(&yaw_msg);
   return true;
 }
@@ -170,6 +181,10 @@ bool pitch_motor_call() {
   return true;
 }
 
+
+ros::Subscriber<std_msgs::Int16> pan_sub("pan", &panCallback);
+ros::Subscriber<std_msgs::Int16> tilt_sub("tilt", &tiltCallback);
+
 ros::Subscriber<std_msgs::Int32> arm_pitch_position("set_right_arm_pitch_position", &pitchCB);
 ros::Subscriber<std_msgs::Int32> arm_yaw_position("set_right_arm_yaw_position", &yawCB);
 
@@ -179,10 +194,16 @@ void setup() {
   pinMode(DIRECTION_YAW, OUTPUT);
   pinMode(PULSE_PITCH, OUTPUT);
   pinMode(DIRECTION_PITCH, OUTPUT);
+
+  panServo.attach(PAN);
+  tiltServo.attach(TILT);
+  
   //setting the pins to output for the motor
   nh.initNode();
   nh.subscribe(arm_pitch_position);
   nh.subscribe(arm_yaw_position);
+  nh.subscribe(pan_sub);
+  nh.subscribe(tilt_sub);
 
   nh.advertise(pitch_encoder_value);
   nh.advertise(yaw_encoder_value);
