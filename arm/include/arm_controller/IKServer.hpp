@@ -81,6 +81,13 @@ namespace ik2d {
             virtual void setWristAngle(double angle);
 
             /**
+            * @brief A method to conveniently set the angle of the rotation motor with a optional offset from the setOffset method
+            * 
+            * @param angle The angle to set the motor to
+            */
+            virtual void setRotationAngle(double angle);
+
+            /**
             * @brief Returns the angles the arm should move each motor to mvove to a specific x, y position in cm in space
             * 
             * @param px 
@@ -117,6 +124,18 @@ namespace ik2d {
                 return angles;
             }
 
+            /** 
+             * @brief moves the arm in 3 dimesnions
+             * 
+             */
+            void moveArm(double x, double y, double y) {
+                double x_plane = x;
+                double y_plane = sqrt(pow(y, 2) + pow(z, 2));
+
+                moveArm(x_plane, x_plane);
+                setRotationAngle(z + offsets[3]);
+            }
+
             /**
             * @brief Moves the arm to a speicific x, y postion in cm using inverse kinematics
             * 
@@ -135,7 +154,6 @@ namespace ik2d {
                     
                 setShoulderAngle(angles[0]);
                 setElbowAngle(angles[1]);
-                setWristAngle(angles[2]);
             }
     };
 }
