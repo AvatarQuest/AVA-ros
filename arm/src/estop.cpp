@@ -1,16 +1,13 @@
 #include "ros/ros.h"
 #include "std_msgs/Bool.h"
-#include "std_msgs/Float64.h"
+#include "geometry_msgs/Vector3.h"
 #include <sstream>
 
 bool estop = false;
 bool check = false;
 bool started = false;
 
-ros::Publisher right_side_topic;
-ros::Publisher left_side_topic;
-ros::Publisher shoulder_yaw_topic;
-ros::Publisher shoulder_pitch_topic;
+ros::Publisher drivetrain_topic;
 
 void estopCallback(const std_msgs::Bool::ConstPtr& msg) {
     if (!started) {
@@ -23,17 +20,28 @@ void estopCallback(const std_msgs::Bool::ConstPtr& msg) {
     if (estop) {
         ROS_ERROR("ESTOP SIGNAL RECIEVED, KILLING ROSBRIDGE, THEN ALL NODES");
         system("rosnode kill rosbridge_websocket");
-        std_msgs::Float64 zero;
+        geometry_msgs::Vector3 zero;
 
-        zero.data = 0;
+        zero.x = 0;
+        zero.y = 0;
+        zero.z = 0;
 
-        right_side_topic.publish(zero);
-        left_side_topic.publish(zero);
-        shoulder_yaw_topic.publish(zero);
-        shoulder_pitch_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
 
         ROS_ERROR("KILLING ALL NODES");
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
 
+        system("rosnode kill -a");
+        system("rosnode kill -a");
+        system("rosnode kill -a");
         system("rosnode kill -a");
     }
 }
@@ -43,10 +51,7 @@ int main(int argc, char **argv) {
     ros::NodeHandle nodehandle;
 
     ros::Subscriber estop_topic = nodehandle.subscribe("estop", 10, estopCallback);
-    right_side_topic = nodehandle.advertise<std_msgs::Float64>("right_side_speed", 1);
-    left_side_topic = nodehandle.advertise<std_msgs::Float64>("left_side_speed", 1);
-    shoulder_yaw_topic = nodehandle.advertise<std_msgs::Float64>("shoulder_yaw", 1);
-    shoulder_pitch_topic = nodehandle.advertise<std_msgs::Float64>("shoulder_pitch", 1);
+    drivetrain_topic = nodehandle.advertise<geometry_msgs::Vector3>("set_drivetrain_speed", 1);
     
     std::cout << "Started node: 'estop'" << std::endl;
 
@@ -56,17 +61,37 @@ int main(int argc, char **argv) {
         if (!check && started) {
             ROS_ERROR("ESTOP SIGNAL RECIEVED, KILLING ROSBRIDGE, THEN ALL NODES");
             system("rosnode kill rosbridge_websocket");
-            std_msgs::Float64 right, left;
+    	    geometry_msgs::Vector3 zero;
 
-            right.data = 0;
-            left.data = 0;
+	    zero.x = 0;
+	    zero.y = 0;
+	    zero.z = 0;
 
-            right_side_topic.publish(right);
-            left_side_topic.publish(left);
+	    drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
 
-            ROS_ERROR("KILLING ALL NODES");
+	    ROS_ERROR("KILLING ALL NODES");
 
-            system("rosnode kill -a");
+	    system("rosnode kill -a");
+        system("rosnode kill -a");
+        system("rosnode kill -a");
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        drivetrain_topic.publish(zero);
+        system("rosnode kill -a");
+        system("rosnode kill -a");
+        system("rosnode kill -a");
+
             return 0;
         }
 

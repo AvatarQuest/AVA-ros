@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "std_msgs/Int32.h"
+#include "std_msgs/Int16.h"
 #include "geometry_msgs/Vector3.h"
 // #include "msg/Vector4.h";
 
@@ -22,8 +22,8 @@ void vectorCallback(const geometry_msgs::Vector3::ConstPtr& msg) {
     double mapped_y = map(map(offset_y, 45, 315, 0, 270), 0, 270, 180, 0);
 
     ROS_INFO("Message received: (%.2f, %2f)", mapped_x, mapped_y);
-    std_msgs::Int32 pan_msg;
-    std_msgs::Int32 tilt_msg;
+    std_msgs::Int16 pan_msg;
+    std_msgs::Int16 tilt_msg;
     
     tilt_msg.data = mapped_x;
     pan_msg.data = mapped_y;
@@ -39,8 +39,8 @@ int main(int argc, char **argv) {
     // compile pls
 
     ros::Subscriber pantilt_topic = nodehandle.subscribe("pantilt", 1, vectorCallback);
-    pan_topic = nodehandle.advertise<std_msgs::Int32>("pan", 1);
-    tilt_topic = nodehandle.advertise<std_msgs::Int32>("tilt", 1);
+    pan_topic = nodehandle.advertise<std_msgs::Int16>("pan", 1);
+    tilt_topic = nodehandle.advertise<std_msgs::Int16>("tilt", 1);
     
     std::cout << "Started node: 'pantilt'" << std::endl;
 

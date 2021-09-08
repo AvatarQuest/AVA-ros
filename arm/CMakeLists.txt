@@ -189,6 +189,10 @@ add_executable(hi5_receive src/hi5_receive.cpp)
 target_link_libraries(hi5_receive ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 add_dependencies(hi5_receive ${catkin_EXPORTED_TARGETS})
 
+add_executable(arm_controller src/arm_controller.cpp)
+target_link_libraries(arm_controller ${catkin_LIBRARIES})
+add_dependencies(arm_controller ${catkin_EXPORTED_TARGETS})
+
 # add_executable(test src/test_dynamixel.cpp)
 # target_link_libraries(test ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 # add_dependencies(test ${catkin_EXPORTED_TARGETS})

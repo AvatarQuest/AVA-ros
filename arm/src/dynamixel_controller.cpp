@@ -50,16 +50,22 @@ int main(int argc, char **argv) {
     const AddressTableBase table = XM430W350T_TABLE();
 
     std::unordered_map<MotorIdentifier, AddressTableBase, MotorIndentifierHasher> motors;
-
+    // arm  
     elbow1 = MotorIdentifier(12, baudrate, port);
     elbow2 =  MotorIdentifier(13, baudrate, port);
     wrist =  MotorIdentifier(14, baudrate, port);
     claw =  MotorIdentifier(15, baudrate, port);
+    // hand
+    // index = MotorIdentifier(12, baudrate, port);
+    // middle =  MotorIdentifier(13, baudrate, port);
+    // ring =  MotorIdentifier(14, baudrate, port);
+    // pinky =  MotorIdentifier(14, baudrate, port);
+    // thumb =  MotorIdentifier(15, baudrate, port);
 
     motors[elbow1] = table;
     motors[elbow2] = table;
     motors[wrist] = table;
-    motors[claw] = table;
+    motors[claw] = table;   
 
     helper = DynamixelHelper(motors);
 
