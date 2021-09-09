@@ -1,16 +1,15 @@
-#include <unordered_map>
 #include <stdio.h>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <cmath>
 #include <math.h>
-#include <chrono>
 
 #include <ros/ros.h>
 
 #define PI 3.14159265
-namespace ik2d {
+
+namespace ik3d {
     class IKServer {
         private: 
             // ros::NodeHandle nh;
@@ -74,13 +73,6 @@ namespace ik2d {
             virtual void setElbowAngle(double angle);
 
             /**
-            * @brief A method to conveniently set the angle of the wrist with a optional offset from the setOffset method
-            * 
-            * @param angle The angle to set the motor to
-            */
-            virtual void setWristAngle(double angle);
-
-            /**
             * @brief A method to conveniently set the angle of the rotation motor with a optional offset from the setOffset method
             * 
             * @param angle The angle to set the motor to
@@ -128,12 +120,12 @@ namespace ik2d {
              * @brief moves the arm in 3 dimesnions
              * 
              */
-            void moveArm(double x, double y, double y) {
-                double x_plane = x;
-                double y_plane = sqrt(pow(y, 2) + pow(z, 2));
-
-                moveArm(x_plane, x_plane);
-                setRotationAngle(z + offsets[3]);
+            void moveArm(double x, double y, double z) {
+                double x_component = x;
+                double y_component = sqrt(pow(y, 2) + pow(z, 2));
+                double z_angle = asin(z/sqrt(x^2+y^2+z^2)); 
+                moveArm(-x_component, -y_component); //because our ik algorithm is implementing the wrong axis
+                setRotationAngle(z_angle + offsets[3]);
             }
 
             /**
