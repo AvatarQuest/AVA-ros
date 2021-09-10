@@ -6,7 +6,7 @@
 #include <geometry_msgs/Vector3.h>
 #include <std_msgs/Int32.h>
 #include <std_msgs/Float64.h>
-#include <boost/shared_ptr.hpp>
+
 /*
 fix the offsets and the axis through testing
 

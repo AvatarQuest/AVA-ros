@@ -10,6 +10,9 @@
 #include <ros/ros.h>
 
 namespace hand_controller {
+    struct AX12A_TABLE() {
+        //need to define this struct to control the different motor
+    };
     class HandController {
         private:
             ros::NodeHandle nh;
