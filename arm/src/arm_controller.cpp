@@ -12,11 +12,11 @@ fix the offsets and the axis through testing
 
 */
 //constants for the length
-double a1 = 19.5, a2 = 23.7, a3 = 0.01;
+double a1 = 19.05, a2 = 27.94, a3 = 0.01;
 ros::Publisher shoulderPitch, shoulderYaw, elbow;
 ik3d::IKServer server;
 int yawState = 0, pitchState = 0;
-void ik3d::IKServer::setRotationAngle(double angle) {
+void ik3d::IKServer::setZAngle(double angle) {
     if (yawState != int(angle)) {
     	std_msgs::Int32 msg;
     	msg.data = angle;

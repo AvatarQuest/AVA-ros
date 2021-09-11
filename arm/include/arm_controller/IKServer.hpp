@@ -73,13 +73,6 @@ namespace ik3d {
             virtual void setElbowAngle(double angle);
 
             /**
-            * @brief A method to conveniently set the angle of the rotation motor with a optional offset from the setOffset method
-            * 
-            * @param angle The angle to set the motor to
-            */
-            virtual void setRotationAngle(double angle);
-
-            /**
             * @brief Returns the angles the arm should move each motor to mvove to a specific x, y position in cm in space
             * 
             * @param px 
@@ -101,14 +94,17 @@ namespace ik3d {
                 double c1 = ((a1 + a2 * c2) * wx + a2 * s2 * wy) / delta;
                 double theta_1 = atan2(s1, c1);
                 double theta_3 = phi - theta_1 - theta_2;
-
-                theta_1 = -((theta_1 * 180) / PI);
-                theta_2 = ((theta_2 * 180) / PI) + 180;
+                //90-theta1
+                //(90-theta1) * (-1) - theta1 is negative
+                
+                theta_1 = (theta_1 * 180) / PI;
+                theta_2 = -((theta_2 * 180) / PI) + 180;
                 theta_3 = (theta_3 * 180) / PI;
         
                 std::vector<double> angles = {theta_1, theta_2, theta_3};
 
                 if (debug) {
+                    ROS_INFO("POSITION: %.2f, %.2f", px, py);
                     ROS_INFO("Theta 1: %.2f", theta_1);
                     ROS_INFO("Theta 2: %.2f", theta_2);
                     ROS_INFO("Theta 3: %.2f", theta_3);
@@ -122,10 +118,10 @@ namespace ik3d {
              */
             void moveArm(double x, double y, double z) {
                 double x_component = x;
-                double y_component = sqrt(pow(y, 2) + pow(z, 2));
-                double z_angle = asin(z/sqrt(x^2+y^2+z^2)); 
-                moveArm(-x_component, -y_component); //because our ik algorithm is implementing the wrong axis
-                setRotationAngle(z_angle + offsets[3]);
+                double y_component = y == 0 ? -0 : (y / abs(y)) * sqrt(pow(y, 2) + pow(z, 2));
+                double z_angle = asin(z/sqrt(pow(x, 2)+pow(y, 2)+pow(z, 2))); 
+                moveArm(x_component, y_component); //because our ik algorithm is implementing the wrong axis
+                setZAngle(z_angle + offsets[3]);
             }
 
             /**
