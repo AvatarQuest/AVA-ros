@@ -145,11 +145,19 @@ void tiltCallback(const std_msgs::Int16& msg){
 }
 
 void pitchCB(const std_msgs::Int32& msg) {
+  if (abs(msg.data) > 90) {
+    return;
+  }
+
   int pitchP = -msg.data * (200 * 50/180);
   pitch_motor.setGoalPosition(pitchP);
 }
 
 void yawCB(const std_msgs::Int32& msg) {
+  if (abs(msg.data) > 90) {
+    return;
+  }
+
   int yawP = msg.data * (200 * 50 * 1.65/180);
   yaw_motor.setGoalPosition(yawP);
 }

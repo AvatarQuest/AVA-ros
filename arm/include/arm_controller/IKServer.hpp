@@ -104,7 +104,6 @@ namespace ik3d {
                 std::vector<double> angles = {theta_1, theta_2, theta_3};
 
                 if (debug) {
-                    ROS_INFO("POSITION: %.2f, %.2f", px, py);
                     ROS_INFO("Theta 1: %.2f", theta_1);
                     ROS_INFO("Theta 2: %.2f", theta_2);
                     ROS_INFO("Theta 3: %.2f", theta_3);
@@ -118,15 +117,15 @@ namespace ik3d {
              */
             void moveArm(double x, double y, double z) {
                 double x_component = x;
-                double y_component = y == 0 ? -0 : (y / abs(y)) * sqrt(pow(y, 2) + pow(z, 2));
-                double z_angle = asin(z/sqrt(pow(x, 2)+pow(y, 2)+pow(z, 2))) * 180/PI; 
-
-		if (debug) {
-		    ROS_INFO("TRANSLATED %.2f, %.2f, %.2f to %.2f, %.2f, %.2f", x, y, z, x_component, y_component, z_angle); 
-		}
-                if (moveArm(x_component, y_component)) { //because our ik algorithm is implementing the wrong a
-			setZAngle(z_angle + offsets[3]);
-		}
+                double y_component = y == 0 ? 0 : (y / abs(y)) * sqrt(pow(y, 2) + pow(z, 2));
+                double z_angle = abs(x)+abs(y)+abs(z) == 0 ? 0 : asin(z/sqrt(pow(x, 2)+pow(y, 2)+pow(z, 2))) * (180/PI); 
+                if (debug) {
+                    ROS_INFO("POSITION: %.2f, %.2f, %.2f", x, y, z);
+                    ROS_INFO("TRANSLATED TO: %.2f, %.2f", x_component, y_component, z_angle);
+                }
+                if (moveArm(x_component, y_component)) {
+                    setZAngle(z_angle + offsets[3]);
+                }
             }
 
             /**
@@ -147,7 +146,7 @@ namespace ik3d {
                     
                 setShoulderAngle(angles[0]);
                 setElbowAngle(angles[1]);
-		return true;
+                return true;
             }
     };
 }

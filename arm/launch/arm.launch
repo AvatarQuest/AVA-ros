@@ -1,6 +1,7 @@
 <launch>
     <node name="start_arm_serial" pkg="arm" type="start_arm_serial.sh" />
     <node name="dynamixel_controller" pkg="arm" type="dynamixel_controller" />
+    <node name="hand_controller" pkg="arm" type="hand_controller" />
     <node name="arm_controller" pkg="arm" type="arm_controller" />
-    <!--  <node name="estop" pkg="arm" type="estop" required="true" /> -->
+     <node name="estop" pkg="arm" type="estop" required="true" />
 </launch>
