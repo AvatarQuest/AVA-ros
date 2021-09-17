@@ -15,10 +15,10 @@ DynamixelHelper helper;
 
 void elbowCallback(const std_msgs::Float64::ConstPtr& msg) {
     double angle1;
-    if (msg->data > 270) {
-        angle1 = 270;
-    } else if (msg->data < 90) {
-        angle1 = 90;
+    if (msg->data > 290) {
+        angle1 = 290;
+    } else if (msg->data < 70) {
+        angle1 = 70;
     } else {
         angle1 = msg->data; // for motor 1
     }

@@ -193,9 +193,9 @@ add_executable(arm_controller src/arm_controller.cpp)
 target_link_libraries(arm_controller ${catkin_LIBRARIES})
 add_dependencies(arm_controller ${catkin_EXPORTED_TARGETS})
 
-add_executable(hand_controller src/hand_controller.cpp)
-target_link_libraries(hand_controller ${catkin_LIBRARIES})
-add_dependencies(hand_controller ${catkin_EXPORTED_TARGETS})
+# add_executable(hand_controller src/hand_controller.cpp)
+# target_link_libraries(hand_controller ${catkin_LIBRARIES})
+# add_dependencies(hand_controller ${catkin_EXPORTED_TARGETS})
 
 # add_executable(test src/test_dynamixel.cpp)
 # target_link_libraries(test ${catkin_LIBRARIES} ${Boost_LIBRARIES})

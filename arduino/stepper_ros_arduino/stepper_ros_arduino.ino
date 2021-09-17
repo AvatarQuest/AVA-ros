@@ -145,7 +145,7 @@ void tiltCallback(const std_msgs::Int16& msg){
 }
 
 void pitchCB(const std_msgs::Int32& msg) {
-  int pitchP = msg.data * (200 * 50/180);
+  int pitchP = -msg.data * (200 * 50/180);
   pitch_motor.setGoalPosition(pitchP);
 }
 

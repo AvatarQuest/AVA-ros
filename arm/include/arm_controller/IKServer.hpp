@@ -119,9 +119,14 @@ namespace ik3d {
             void moveArm(double x, double y, double z) {
                 double x_component = x;
                 double y_component = y == 0 ? -0 : (y / abs(y)) * sqrt(pow(y, 2) + pow(z, 2));
-                double z_angle = asin(z/sqrt(pow(x, 2)+pow(y, 2)+pow(z, 2))); 
-                moveArm(x_component, y_component); //because our ik algorithm is implementing the wrong axis
-                setZAngle(z_angle + offsets[3]);
+                double z_angle = asin(z/sqrt(pow(x, 2)+pow(y, 2)+pow(z, 2))) * 180/PI; 
+
+		if (debug) {
+		    ROS_INFO("TRANSLATED %.2f, %.2f, %.2f to %.2f, %.2f, %.2f", x, y, z, x_component, y_component, z_angle); 
+		}
+                if (moveArm(x_component, y_component)) { //because our ik algorithm is implementing the wrong a
+			setZAngle(z_angle + offsets[3]);
+		}
             }
 
             /**
@@ -130,11 +135,11 @@ namespace ik3d {
             * @param x The x poisiton in cm
             * @param y The y position in cm
             */
-            void moveArm(double x, double y) {
+            bool moveArm(double x, double y) {
                 std::vector<double> angles = ik(x, y);
                 if (std::isnan(angles[0]) || std::isnan(angles[1]) || std::isnan(angles[2])) {
                     ROS_WARN("Invalid position, not moving the arm");
-                    return;
+                    return false;
                 } 
                 if (debug) {
                     ROS_INFO("ANGLES: %.2f, %.2f, %.2f", angles[0], angles[1], angles[2]);
@@ -142,6 +147,7 @@ namespace ik3d {
                     
                 setShoulderAngle(angles[0]);
                 setElbowAngle(angles[1]);
+		return true;
             }
     };
 }

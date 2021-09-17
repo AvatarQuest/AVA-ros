@@ -1,5 +1,5 @@
 <launch>
-	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
 	<node name="pantilt" pkg="vision" type="pantilt" respawn="true"/>
+	<node name="ZED_Streaming" pkg="vision" type="ZED_Streaming_serial.sh" respawn="true"/>
 
 </launch>
